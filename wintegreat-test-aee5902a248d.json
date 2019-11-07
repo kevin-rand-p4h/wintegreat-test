@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "wintegreat-test",
+  "private_key_id": "aee5902a248de5a87e17a3ba131f33ea2b99b117",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQClTXDw2YAKNVnF\nvKa6PxYcrX9guhymEl5Ch3/7hih24yy/mmEhj6viRvYFDSoRtIMvgsLQ5OpxtToM\n70bGCmcVcL7YukRytEYZ5Hj9UROCtaD2zCHPOswbUOVNfLdKb7EKnD/vl/AZ+21B\nPd2DXlhHLtTUpoRzsZTGepUhVTsl45j6i+zrMRz7Co0Qrf+170FpWD3IXndzL6Wq\n4gUs0PF3jS0LYvo0Eb9QujenCvLNHiGP8eXirgukrF89YPcJPz/1RTi6QyI9C92C\n9H0RP29x9uFXmKIfNHMVe3Kbj61hBUQ3J/MT1ziYiYE9LQ4aoiuNOR4KIB5L588Z\ntuxmXF8rAgMBAAECggEALzNdOBDLHF8eirVzIERqUncCI8MQ8iTVkIazd0VYIZZ9\nzRpOePBW4s5jao7XP+X8/aCHc3GiNiTK9i2O1nba94bRn/4UFHLAf507JQ41FYI6\ne65PSyadaIFhcI5XoiQheAekxAvtDeY6zMHXEi9q4qyPLkd8E7MV6dTP54w4Tvlo\nCfUY+0lxZjp8DGTShKIvqDJn3E4b3rCbOBhL0rUzMg1DzBdf7NKLP/fIk79tVnd8\nBS85JE56Iq6JSSwi3gTp0x7ZUQWvMddgT6IwdQXm+lsurK64k+TN1CK8zpXab/wE\nwKMTMzwumKTPUtj7llxbar8Mrh5OF8w1+U9i4U8JJQKBgQDc9MlpB6wiHWMEVJan\n7pTaNohdE/FhshPnUDPA6t50TLQYN6JsNlx1ijhocqh+iM0fdlkl4OkTRqXkIW2z\n7WkI3JPvdVSRw+t9t33mqt1laSzX8S9TgmCtYAkgLLMCyZdCmi1JTU/ZtAqaB9/u\nCPIhxw+sqjWTAK2bPIFiM8nEnwKBgQC/hQQMxaS4xMyto1pM+N8vB7giqOvzWFq4\ndJViRzo1HI9OsEOUxEs0twcZeQRT+Eyfu12iaq+vWSqk8k17IEWngtb+8qIao/Nb\nso8RCbQAr/hICt3Q1mMmIgDFsi3Lirw9IDFg4Ki9CJrykTg3YcOag3V2o6AYSPWL\nxXEuj0Tt9QKBgFKigcj0A55mmyd9czKu+aB6kJku4jGFZgg2aISX0kZwgVIlTGto\nEUAsR1hYuUdJZl2D52dRLBn3bAdbsSl/eq7Dv9foa45wVVwZCc8Ay/gnU4wXOXnj\n4sA0kHUmAnTia92Ox60IavqiaOyeUVM2qUeUqPoMVij6MfNCt6jAcY9FAoGBAK2W\nmcIdzhxuu/nSKsHDfT76Zyp7I0mwVqIDgXbPinGjTj0LRGXtuSCxmCy9ZG/biU/q\nGodg3ZY4Yo+Y0yN7b8bRr57rOoSc/7GoWUYfHljVJlveBYkJGFryzPJjemCXgeCB\ncmAVoLudthuQBn0kDo/ZATmkOzJnxq+GKP0DfH2VAoGAPZ5WprjZp2RQz4EctDqR\nt7F0wF2ClxZVuJbTsRv9rOXmcyYFuojygYoMcvrPYKPB33WgyyXlAOHY3XhC83lG\n2Hr0MhDTpei8uTgKedzXxF14e2lupogLnFGpjROKLJJyVkypFdxskQsqSk5o/X2/\nk8jk0x2uM7Xzg/IhMTLkrzk=\n-----END PRIVATE KEY-----\n",
+  "client_email": "wintegreat-test-kevin@wintegreat-test.iam.gserviceaccount.com",
+  "client_id": "106108941944020968103",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/wintegreat-test-kevin%40wintegreat-test.iam.gserviceaccount.com"
+}

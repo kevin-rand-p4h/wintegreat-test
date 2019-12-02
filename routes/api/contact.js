@@ -6,9 +6,9 @@ const bigqueryClient = Bigquery.getClient()
 const hubspot = Hubspot.getClient()
 router.get('/getAll', function (req, res, next) {
 
-  var contact = hubspot.forms.getSubmissions('4dcef6e8-394a-4dde-a688-16eb384765cd')
+  var contact = hubspot.forms.getSubmissions('0beb5763-527f-4d1c-bd1e-7886bf87b9c4')
   // console.log(contact);
-  contact.then(res => {
+  contact.then(res, rej => {
     // res.end(res)
     // console.log(res)
     res.results.forEach(element => {
@@ -16,7 +16,7 @@ router.get('/getAll', function (req, res, next) {
     });
     // console.log()
     res.end()
-  })
+  }).catch(error => console.log(error.message));
 });
 
 module.exports = router;

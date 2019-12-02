@@ -5,12 +5,12 @@ const Hubspot = require('../../services/hubspot')
 const bigqueryClient = Bigquery.getClient()
 const hubspot = Hubspot.getClient()
 router.get('/migrate', async function (req, res, next) {
-  try{
+  try {
     task.run();
-  } catch(err) {
+    res.send("VITA ny asa")
+  } catch (err) {
     console.log(err)
   }
 })
 
 module.exports = router;
-

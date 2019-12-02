@@ -5,9 +5,13 @@ const bigquery = require('./bigquery')
 const hs = hubspot.getClient()
 const bq = bigquery.getClient()
 const fs = require('fs')
+
+function getProperty(property_name, contact) {
+  return (contact.properties[property_name] && contact.properties[property_name].value) || ''; 
+}
+
 module.exports = {
-  run: function () {
-    const task = async function () {
+    run: async function () {
       try {
         console.log("================== TASK BEGIN ====================")
         const dataset = bq.dataset(config.bigquery.dataset);
@@ -38,13 +42,14 @@ module.exports = {
           contacts.push(...nextData.contacts) // Ajouter les données dans data
           opts = { ...opts, ...{ vidOffset: nextData['vid-offset'], timeOffset: nextData['time-offset'] } }
         }
+        console.log(contacts);
 
         console.log("------------------ Got data ------------------")
         // Modification de la structure des données pour l'adaptation vers Bigquery
         bqContacts = contacts.map(function (contact) {
           return {
-            firstname: contact.properties.firstname.value,
-            lastname: contact.properties.lastname.value,
+            firstname: getProperty('firstname', contact),
+            lastname: getProperty('lastname', contact),
           }
         })
 
@@ -69,6 +74,4 @@ module.exports = {
         throw err
       }
     }
-    cronRunner(task, config.cron)
-  }
 }

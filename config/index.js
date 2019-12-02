@@ -11,7 +11,7 @@ module.exports = {
   },
   hubspot: {
     contactRequest: {
-      count: 2 // Nombre de contact à prendre par requete
+      count: 100 // Nombre de contact à prendre par requete
     },
     apiKey: '0beb5763-527f-4d1c-bd1e-7886bf87b9c4',
     lastOffsetLocation: 'config/last.json'

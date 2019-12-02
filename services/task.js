@@ -54,21 +54,23 @@ module.exports = {
 
         console.log("----------------- Inserting data into bigquery ----------------")
         //Insertion des données dans bigquery
-        table.insert(bqContacts, (err, apiResponse) => {
-          if (err) {
-            console.log(`Error when inserting data to table. ${err}`)
-          }
-          else {
-            console.log(`Data inserted`)
-            console.log("-------------------- UPDATING last.json ---------------------")
-            // MISE A JOUR DU FICHIER last.json 
-            contactOffset = { ...contactOffset, ...{ vidOffset: contacts[0]['canonical-vid'], timeOffset: contacts[0].addedAt } }
-            fs.writeFileSync(config.hubspot.lastOffsetLocation, JSON.stringify({ contact: contactOffset }))
-            console.log("--------------------- last.json UPDATED ----------------------")
-          }
-          console.log(apiResponse)
-        })
-        console.log("===================== TASK DONE =========================")
+        if(bqContacts.length){
+          table.insert(bqContacts, (err, apiResponse) => {
+            if (err) {
+              console.log(`Error when inserting data to table. ${err}`)
+            }
+            else {
+              console.log(`Data inserted`)
+              console.log("-------------------- UPDATING last.json ---------------------")
+              // MISE A JOUR DU FICHIER last.json 
+              contactOffset = { ...contactOffset, ...{ vidOffset: contacts[0]['canonical-vid'], timeOffset: contacts[0].addedAt } }
+              fs.writeFileSync(config.hubspot.lastOffsetLocation, JSON.stringify({ contact: contactOffset }))
+              console.log("--------------------- last.json UPDATED ----------------------")
+            }
+            console.log(apiResponse)
+          })
+          console.log("===================== TASK DONE =========================")
+        }
       } catch (err) {
         throw err
       }

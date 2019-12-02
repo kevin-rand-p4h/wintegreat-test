@@ -70,6 +70,8 @@ module.exports = {
             console.log(apiResponse)
           })
           console.log("===================== TASK DONE =========================")
+        } else {
+            return 'Nothing to insert';
         }
       } catch (err) {
         throw err

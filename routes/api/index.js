@@ -6,6 +6,7 @@ router.get('/', function (req, res) {
   });
 
 router.use('/contact', require('./contact'));
+router.use('/table', require('./table'));
 
 
 

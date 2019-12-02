@@ -1,4 +1,3 @@
-const cronRunner = require('./cron')
 const config = require('../config');
 const hubspot = require('./hubspot')
 const bigquery = require('./bigquery')

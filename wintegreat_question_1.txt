@@ -1,0 +1,31 @@
+Création d'un compte developpeur sur hubspot
+Génération et récuperation du clé d'API
+Création d'un serveur local node.js
+Installation package node-hubspot npm
+	Available Methods
+	Companies
+		hubspot.companies.get(opts) - getById - getRecentlyCreated - getRecentlyModified
+	Contacts
+		hubspot.contacts.get(opts) - getByEmail - getByEmailBatch
+	Offres
+		hubspot.deals.get(opts) - getRecentlyModified - getRecentlyCreated
+	Formes (formulaire)
+		hubspot.forms.get(opts) - getById - getSingleField - getSubmissions - create - update - delete
+		hubspot.forms.submit(portalId, formId, data)
+
+Installation package BigQuery npm
+
+Charger des données dans BigQuery
+	depuis Cloud Storage ;
+	depuis d'autres services Google,
+	depuis une source de données accessible en lecture
+	via des instructions DML permettant d'effectuer des insertions groupées ;
+	via une transformation OI Google BigQuery dans un pipeline Cloud Dataflow
+	en insérant des enregistrements individuels via des insertions en streaming : 
+==> limite 1000 table /jour 
+    création de dataset 
+	création table dans bigquery
+	insertion data dans les tables
+
+Préférence pour la structure de la BDD BigQuery pour faciliter la manipulation des analyses BI
+

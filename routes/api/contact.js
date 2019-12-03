@@ -7,9 +7,18 @@ const hubspot = Hubspot.getClient()
 router.get('/migrate', async function (req, res, next) {
   try {
     task.run();
-    res.send("VITA ny asa")
+    res.json({
+      message: "Task done successfully!",
+      status: "done"
+    })
   } catch (err) {
-    console.log(err)
+    res.json({
+      message: "Got an error on task",
+      details: [
+        err
+      ],
+      status: "error"
+    })
   }
 })
 

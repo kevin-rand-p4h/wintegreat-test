@@ -1,0 +1,2196 @@
+{
+  "contact": {
+    "properties": {
+      "a_d_j_travaill_en_france": {
+        "label": "A déjà travaillé en France",
+        "type": "enumeration"
+      },
+      "abonnement_la_newsletter": {
+        "label": "Abonnement à la Newsletter",
+        "type": "enumeration"
+      },
+      "accepte_d_etre_contacter_pour_temoigner": {
+        "label": "Accepte d'être contacter pour témoigner",
+        "type": "enumeration"
+      },
+      "acces_facile_aux_informations": {
+        "label": "Accès facile aux informations",
+        "type": "enumeration"
+      },
+      "accompagnement_d_marches_administratives": {
+        "label": "Accompagnement démarches administratives",
+        "type": "enumeration"
+      },
+      "accompagnement_par_une_association_partenaire": {
+        "label": "Accompagnement par une association partenaire",
+        "type": "enumeration"
+      },
+      "accord_pour_l_utilisation_des_reponses_dans_les_rapports": {
+        "label": "Accord pour l'utilisation des réponses dans les rapports",
+        "type": "enumeration"
+      },
+      "accorde_la_presse_le_droit_d_enregistrer_sa_voix": {
+        "label": "Accorde à la presse le droit d'enregistrer sa voix",
+        "type": "enumeration"
+      },
+      "accorde_la_presse_le_droit_de_filmer_son_interview": {
+        "label": "Accorde à la presse le droit de filmer son interview",
+        "type": "enumeration"
+      },
+      "accorde_la_presse_le_droit_de_le_citer": {
+        "label": "Accorde à la presse le droit de le citer",
+        "type": "enumeration"
+      },
+      "accorde_la_presse_le_droit_de_le_citer_anonymement": {
+        "label": "Accorde à la presse le droit de le citer anonymement",
+        "type": "enumeration"
+      },
+      "accorde_la_presse_le_droit_de_le_photographier": {
+        "label": "Accorde à la presse le droit de le photographier",
+        "type": "enumeration"
+      },
+      "accorde_la_presse_le_droit_de_mentionner_son_nom_et_pr_nom": {
+        "label": "Accorde à la presse le droit de mentionner son nom et prénom",
+        "type": "enumeration"
+      },
+      "activit_s_impliquant_la_cr_ation_de_relations_sociales": {
+        "label": "Activités impliquant la création de relations sociales",
+        "type": "enumeration"
+      },
+      "activite_pratique_juste_avant_le_programme_tremplin": {
+        "label": "Activité pratiqué juste avant le Programme Tremplin",
+        "type": "string"
+      },
+      "activites_de_creation_de_relation_sociales_debut_de_programme": {
+        "label": "Activités de création de relation sociales début de programme",
+        "type": "enumeration"
+      },
+      "adaptation_de_l_emploi_du_temps_aux_besoins": {
+        "label": "Adaptation de l'emploi du temps aux besoins M+0",
+        "type": "enumeration"
+      },
+      "adaptation_des_cours_aux_besoins": {
+        "label": "Adaptation des cours aux besoins M+0",
+        "type": "enumeration"
+      },
+      "adresse_d_entretiens": {
+        "label": "Adresse d'entretiens",
+        "type": "string"
+      },
+      "adresse_de_vie": {
+        "label": "Adresse de vie",
+        "type": "string"
+      },
+      "affectation_classe": {
+        "label": "Affectation classe",
+        "type": "string"
+      },
+      "age": {
+        "label": "Age",
+        "type": "number"
+      },
+      "age_moyen_des_enfants": {
+        "label": "Age moyen des enfants",
+        "type": "number"
+      },
+      "aide_du_buddy_a_la_comprehension_de_la_culture_francaise_et_pour_l_integration": {
+        "label": "Aide du buddy à la compréhension de la culture française et pour l'intégration",
+        "type": "enumeration"
+      },
+      "aide_du_coach_a_la_comprehension_de_la_culture_francaise_et_pour_l_integration": {
+        "label": "Aide du coach à la compréhension de la culture française et pour l'intégration",
+        "type": "enumeration"
+      },
+      "aide_du_mentor_a_la_comprehension_de_la_culture_francaise_et_pour_l_integration": {
+        "label": "Aide du mentor à la compréhension de la culture française et pour l'intégration M+0",
+        "type": "enumeration"
+      },
+      "aides_financi_res": {
+        "label": "Aides financières",
+        "type": "enumeration"
+      },
+      "analyse_de_vid_o_note_globale": {
+        "label": "Analyse de vidéo-note globale",
+        "type": "number"
+      },
+      "ancien_r_le": {
+        "label": "Ancien rôle ",
+        "type": "enumeration"
+      },
+      "ancien_tablissement_wintegreat": {
+        "label": "Ancien établissement Wintegreat",
+        "type": "enumeration"
+      },
+      "ann_es_d_exp_riences_professionnelles": {
+        "label": "Années d'expériences professionnelles",
+        "type": "number"
+      },
+      "ann_es_d_tudes": {
+        "label": "Années d'études",
+        "type": "number"
+      },
+      "appartenance_a_la_communaute_wintegreat": {
+        "label": "Appartenance à la communauté Wintegreat M+0",
+        "type": "enumeration"
+      },
+      "apport_du_dipl_me_en_france": {
+        "label": "Apport du diplôme en France",
+        "type": "enumeration"
+      },
+      "appreciation_des_evenements_wintegreat": {
+        "label": "Appréciation des événements Wintegreat M+0",
+        "type": "string"
+      },
+      "attestation_de_situation": {
+        "label": "Attestation de situation",
+        "type": "string"
+      },
+      "avez_vous_d_j_fait_un_programme_wintegreat_": {
+        "label": "Avez-vous déjà fait un programme Wintegreat ?",
+        "type": "enumeration"
+      },
+      "avez_vous_d_j_t_mentor_coach_buddy_": {
+        "label": "Avez vous déjà été Mentor, Coach, Buddy ? ",
+        "type": "enumeration"
+      },
+      "avez_vous_t_diplom_": {
+        "label": "Avez-vous été diplomé?",
+        "type": "enumeration"
+      },
+      "avis_du_jury_sur_le_recrutement_du_candidat": {
+        "label": "Avis du Jury sur le recrutement du candidat",
+        "type": "enumeration"
+      },
+      "besoin_de_logement": {
+        "label": "Situation logement",
+        "type": "enumeration"
+      },
+      "ce_que_wintegreat_a_apporte": {
+        "label": "Plus grande satisfaction Programme M+0",
+        "type": "string"
+      },
+      "certain_d_accomplir_une_t_che_difficile": {
+        "label": "Certain d'accomplir une tâche difficile ",
+        "type": "number"
+      },
+      "certitude_d_accomplir_des_taches_difficiles_debut_de_programme": {
+        "label": "Certitude d'accomplir des tâches difficiles début de programme",
+        "type": "enumeration"
+      },
+      "commentaires_sur_la_progression_en_anglais_m_0": {
+        "label": "Commentaires sur la progression en anglais M+0",
+        "type": "string"
+      },
+      "commentaires_sur_les_obstacles_et_la_progression_de_francais": {
+        "label": "Commentaires sur les obstacles et la progression de français M+0",
+        "type": "string"
+      },
+      "comp_tense_digitale": {
+        "label": "Compétence digitale",
+        "type": "enumeration"
+      },
+      "company_size": {
+        "label": "Company size",
+        "type": "string"
+      },
+      "confiance_en_l_avenir_debut_de_programme": {
+        "label": "Confiance en l'avenir Début de programme",
+        "type": "enumeration"
+      },
+      "confiance_en_votre_avenir": {
+        "label": "Confiance en votre avenir ",
+        "type": "number"
+      },
+      "confirmation_participation_au_programme": {
+        "label": "Confirmation participation au programme",
+        "type": "enumeration"
+      },
+      "confirmation_participation_aux_entretiens": {
+        "label": "Confirmation participation aux entretiens",
+        "type": "enumeration"
+      },
+      "conseille_a_son_entourage_de_s_engager_dans_les_programmes": {
+        "label": "Conseille à son entourage de s'engager dans les programmes",
+        "type": "enumeration"
+      },
+      "consid_ration_de_l_emploi_par_rapport_au_niveau_d_tudes": {
+        "label": "Considération de l'emploi par rapport au niveau d'études avant programme",
+        "type": "enumeration"
+      },
+      "consid_ration_de_l_emploi_par_rapport_l_ancien_niveau_de_responsabilit_": {
+        "label": "Considération de l'emploi par rapport ancien niveau de responsabilité",
+        "type": "enumeration"
+      },
+      "consideration_de_l_emploi_avant_programme_par_rapport_a_l_ancien_niveau_de_responsabilite": {
+        "label": "Considération de l'emploi avant programme par rapport à l'ancien niveau de responsabilité ",
+        "type": "enumeration"
+      },
+      "consideration_de_l_emploi_par_rapport_au_niveau_d_experience_avant_programme": {
+        "label": "Considération de l'emploi par rapport au niveau d'expérience avant programme",
+        "type": "enumeration"
+      },
+      "consideration_que_les_universites_sont_des_acteurs_centraux_de_l_ess": {
+        "label": "Considération que les Universités sont des acteurs centraux de l'ESS",
+        "type": "enumeration"
+      },
+      "consideration_que_les_universites_sont_des_lieux_d_ouverture_et_d_integration": {
+        "label": "Considération que les Universités sont des lieux d'ouverture et d'intégration",
+        "type": "enumeration"
+      },
+      "contact_garder": {
+        "label": "Contact à garder",
+        "type": "string"
+      },
+      "contrat_d_engagement": {
+        "label": "Contrat d'engagement",
+        "type": "string"
+      },
+      "contrat_de_votre_travail_en_france": {
+        "label": "Contrat de votre travail en France",
+        "type": "enumeration"
+      },
+      "contribution_au_projet_professionnel_du_participant": {
+        "label": "Contribution au projet professionnel du participant",
+        "type": "enumeration"
+      },
+      "contribution_des_programmes_sur_la_connaissance_des_refugies": {
+        "label": "Contribution des Programmes sur la connaissance des réfugiés",
+        "type": "enumeration"
+      },
+      "contribution_des_programmes_sur_une_vision_optimiste_de_la_societe": {
+        "label": "Contribution des programmes sur une vision optimiste de la société",
+        "type": "enumeration"
+      },
+      "contribution_experience_wintegreat_au_projet_professionnel": {
+        "label": "Contribution expérience Wintegreat au projet professionnel",
+        "type": "enumeration"
+      },
+      "cours_de_soft_skills_les_moins_utiles_m_0": {
+        "label": "Cours de soft skills les moins utiles M+0",
+        "type": "enumeration"
+      },
+      "cours_de_soft_skills_preferes": {
+        "label": "Cours de soft skills préférés M+0",
+        "type": "enumeration"
+      },
+      "cv": {
+        "label": "CV",
+        "type": "string"
+      },
+      "date_d_arriv_e_en_france": {
+        "label": "Date d'arrivée en France",
+        "type": "date"
+      },
+      "date_d_entretien": {
+        "label": "Date d'entretien",
+        "type": "date"
+      },
+      "date_d_inscription_p_le_emploi": {
+        "label": "Date d'inscription à pôle emploi",
+        "type": "date"
+      },
+      "date_d_obtention_du_statut": {
+        "label": "Date d'obtention du statut",
+        "type": "date"
+      },
+      "date_de_d_but_d_engagement": {
+        "label": "Date de debut d'engagement ",
+        "type": "date"
+      },
+      "date_de_d_but_de_programme": {
+        "label": "Date de début de programme",
+        "type": "date"
+      },
+      "date_de_la_derni_re_formation": {
+        "label": "Date de la dernière formation",
+        "type": "date"
+      },
+      "date_de_la_derni_re_remont_e_de_probl_me": {
+        "label": "Date de la dernière remontée de problème",
+        "type": "date"
+      },
+      "date_de_naissance": {
+        "label": "Date de naissance",
+        "type": "date"
+      },
+      "date_de_validit_de_l_attestation": {
+        "label": "Date de validité de l'attestation",
+        "type": "date"
+      },
+      "date_of_birth": {
+        "label": "Date of birth",
+        "type": "string"
+      },
+      "days_to_close": {
+        "label": "Days To Close",
+        "type": "number"
+      },
+      "degre_d_apport_de_wintegreat_sur_la_vie_quotidienne_en_france": {
+        "label": "Degré d'apport de Wintegreat sur la vie quotidienne en France M+0",
+        "type": "enumeration"
+      },
+      "degre_d_ouverture_a_d_autres_champs_de_rencontres_suite_a_wintegreat": {
+        "label": "Degré d'ouverture à d'autres champs de rencontres suite à Wintegreat",
+        "type": "enumeration"
+      },
+      "degre_de_satisfaction_de_la_relation_creee_avec_le_participant": {
+        "label": "Degré de satisfaction de la relation créée avec le participant",
+        "type": "enumeration"
+      },
+      "degre_de_satisfaction_de_la_relation_creee_avec_les_autres_accompagnants": {
+        "label": "Degré de satisfaction de la relation créée avec les autres accompagnants",
+        "type": "enumeration"
+      },
+      "degre_de_sensibilisation_aux_benefices_de_l_integration": {
+        "label": "Degré de sensibilisation aux bénéfices de l'intégration",
+        "type": "enumeration"
+      },
+      "degree": {
+        "label": "Degree",
+        "type": "string"
+      },
+      "dernier_diplome_obtenu": {
+        "label": "Dernier diplôme obtenu",
+        "type": "string"
+      },
+      "dernier_probl_me_identifi_": {
+        "label": "Dernier problème identifié",
+        "type": "enumeration"
+      },
+      "description_de_wintegreat_a_un_ami": {
+        "label": "Description de Wintegreat à un ami M+0",
+        "type": "string"
+      },
+      "difficultes_rencontrees_dans_la_relation_avec_le_participant": {
+        "label": "Difficultés rencontrées dans la relation avec le participant",
+        "type": "string"
+      },
+      "difficultes_rencontrees_programme_m_0": {
+        "label": "Difficultés rencontrées Programme M+0",
+        "type": "string"
+      },
+      "disponibilit_": {
+        "label": "Disponibilité",
+        "type": "enumeration"
+      },
+      "domaine_d_etudes_m_3": {
+        "label": "Domaine d'études M+3",
+        "type": "enumeration"
+      },
+      "dur_e_du_travail_en_france": {
+        "label": "Durée du travail en France ",
+        "type": "enumeration"
+      },
+      "ecole_choisie_pour_le_programme": {
+        "label": "Ecole affectée",
+        "type": "enumeration"
+      },
+      "elements_importants_dans_l_accompagnement": {
+        "label": "Eléments importants dans l'accompagnement",
+        "type": "string"
+      },
+      "email_accompagnant_ayant_signal_un_frein": {
+        "label": "Email accompagnant ayant signalé un problème",
+        "type": "string"
+      },
+      "en_bon_termes_avec_l_entourage": {
+        "label": "En bon termes avec l'entourage",
+        "type": "string"
+      },
+      "en_bon_termes_avec_son_entourage_debut_de_programme": {
+        "label": "En bon termes avec son entourage début de programme",
+        "type": "enumeration"
+      },
+      "engagement_du_candidat": {
+        "label": "Engagement du candidat",
+        "type": "enumeration"
+      },
+      "entreprise_du_mentor_accompagnant": {
+        "label": "Entreprise du mentor accompagnant ",
+        "type": "string"
+      },
+      "equipe_wintegreat_suffisamment_a_l_ecoute": {
+        "label": "Equipe Wintegreat suffisamment à l'écoute M+0",
+        "type": "enumeration"
+      },
+      "equivalence_du_dipl_me_obtenue": {
+        "label": "Equivalence du diplôme obtenue",
+        "type": "enumeration"
+      },
+      "etablissement_programme": {
+        "label": "Etablissement programme",
+        "type": "enumeration"
+      },
+      "etapes_que_le_participant_doit_r_aliser_afin_de_r_aliser_le_projet_pro": {
+        "label": "Etapes que le participant doit réaliser afin de réaliser le projet pro ",
+        "type": "string"
+      },
+      "etat_du_projet_professionnel_m_0": {
+        "label": "État du projet professionnel M+0",
+        "type": "enumeration"
+      },
+      "evaluation_du_niveau_des_cours_d_anglais_m_0": {
+        "label": "Evaluation du niveau des cours d'anglais M+0",
+        "type": "enumeration"
+      },
+      "field_of_study": {
+        "label": "Domaine d'études",
+        "type": "enumeration"
+      },
+      "first_conversion_date": {
+        "label": "First Conversion Date",
+        "type": "datetime"
+      },
+      "first_conversion_event_name": {
+        "label": "First Conversion",
+        "type": "string"
+      },
+      "first_deal_created_date": {
+        "label": "First Deal Created Date",
+        "type": "datetime"
+      },
+      "forces_et_faiblesses_du_buddy": {
+        "label": "Forces et faiblesses du buddy M+0",
+        "type": "string"
+      },
+      "forces_et_faiblesses_du_coach": {
+        "label": "Forces et faiblesses du coach M+0",
+        "type": "string"
+      },
+      "forces_et_faiblesses_du_mentor": {
+        "label": "Forces et faiblesses du mentor M+0",
+        "type": "string"
+      },
+      "frequence_de_rencontre_avec_le_buddy": {
+        "label": "Fréquence des rencontres avec le buddy M+0",
+        "type": "enumeration"
+      },
+      "frequence_de_rencontre_avec_le_coach": {
+        "label": "Fréquence des rencontres avec le coach M+0",
+        "type": "enumeration"
+      },
+      "frequence_des_rencontres_avec_le_mentor": {
+        "label": "Fréquence des rencontres avec le mentor M+0",
+        "type": "enumeration"
+      },
+      "frequence_des_rencontres_avec_le_participant": {
+        "label": "Fréquence des rencontres avec le participant",
+        "type": "enumeration"
+      },
+      "gender": {
+        "label": "Gender",
+        "type": "string"
+      },
+      "go_t_de_s_amuser_et_de_faire_du_sport": {
+        "label": "Goût de s'amuser et de faire du sport",
+        "type": "enumeration"
+      },
+      "gout_de_s_amuser_debut_de_programme": {
+        "label": "Goût de s\"amuser début de programme",
+        "type": "enumeration"
+      },
+      "graduation_date": {
+        "label": "Graduation date",
+        "type": "date"
+      },
+      "heure_d_entretien": {
+        "label": "Heure de début d'entretien",
+        "type": "string"
+      },
+      "heure_de_fin_d_entretien": {
+        "label": "Heure de fin d'entretien",
+        "type": "string"
+      },
+      "hs_additional_emails": {
+        "label": "Additional email addresses",
+        "type": "enumeration"
+      },
+      "hs_all_contact_vids": {
+        "label": "All vids for a contact",
+        "type": "enumeration"
+      },
+      "hs_analytics_first_touch_converting_campaign": {
+        "label": "First Touch Converting Campaign",
+        "type": "string"
+      },
+      "hs_analytics_last_touch_converting_campaign": {
+        "label": "Last Touch Converting Campaign",
+        "type": "string"
+      },
+      "hs_avatar_filemanager_key": {
+        "label": "Avatar FileManager key",
+        "type": "string"
+      },
+      "hs_calculated_form_submissions": {
+        "label": "All form submissions for a contact",
+        "type": "enumeration"
+      },
+      "hs_calculated_merged_vids": {
+        "label": "Merged vids with timestamps of a contact",
+        "type": "enumeration"
+      },
+      "hs_calculated_mobile_number": {
+        "label": "Calculated Mobile Number in International Format",
+        "type": "string"
+      },
+      "hs_calculated_phone_number": {
+        "label": "Calculated Phone Number in International Format",
+        "type": "string"
+      },
+      "hs_calculated_phone_number_area_code": {
+        "label": "Calculated Phone Number Area Code",
+        "type": "string"
+      },
+      "hs_calculated_phone_number_country_code": {
+        "label": "Calculated Phone Number Country Code",
+        "type": "string"
+      },
+      "hs_calculated_phone_number_region_code": {
+        "label": "Calculated Phone Number Region",
+        "type": "string"
+      },
+      "hs_content_membership_email_confirmed": {
+        "label": "Email Confirmed",
+        "type": "bool"
+      },
+      "hs_content_membership_notes": {
+        "label": "Membership Notes",
+        "type": "string"
+      },
+      "hs_content_membership_registered_at": {
+        "label": "Registered At",
+        "type": "datetime"
+      },
+      "hs_content_membership_registration_domain_sent_to": {
+        "label": "Domain to which registration email was sent",
+        "type": "string"
+      },
+      "hs_content_membership_registration_email_sent_at": {
+        "label": "Time registration email was sent",
+        "type": "datetime"
+      },
+      "hs_content_membership_status": {
+        "label": "Status",
+        "type": "enumeration"
+      },
+      "hs_conversations_visitor_email": {
+        "label": "Conversations visitor email",
+        "type": "string"
+      },
+      "hs_created_by_conversations": {
+        "label": "Created By Conversations",
+        "type": "bool"
+      },
+      "hs_created_by_user_id": {
+        "label": "Created by user ID",
+        "type": "number"
+      },
+      "hs_createdate": {
+        "label": "Object create date/time",
+        "type": "datetime"
+      },
+      "hs_document_last_revisited": {
+        "label": "Recent Document Revisit Date",
+        "type": "datetime"
+      },
+      "hs_email_domain": {
+        "label": "Email Domain",
+        "type": "string"
+      },
+      "hs_email_quarantined": {
+        "label": "Email Address Quarantined",
+        "type": "bool"
+      },
+      "hs_email_quarantined_reason": {
+        "label": "Email Address Quarantined Reason",
+        "type": "enumeration"
+      },
+      "hs_email_sends_since_last_engagement": {
+        "label": "Sends Since Last Engagement",
+        "type": "number"
+      },
+      "hs_emailconfirmationstatus": {
+        "label": "Marketing email confirmation status",
+        "type": "enumeration"
+      },
+      "hs_facebook_ad_clicked": {
+        "label": "Clicked Facebook ad",
+        "type": "bool"
+      },
+      "hs_facebookid": {
+        "label": "Facebook ID",
+        "type": "string"
+      },
+      "hs_feedback_last_nps_follow_up": {
+        "label": "Last NPS survey comment",
+        "type": "string"
+      },
+      "hs_feedback_last_nps_rating": {
+        "label": "Last NPS survey rating",
+        "type": "enumeration"
+      },
+      "hs_feedback_last_survey_date": {
+        "label": "Last NPS survey date",
+        "type": "datetime"
+      },
+      "hs_feedback_show_nps_web_survey": {
+        "label": "Should be shown an NPS web survey",
+        "type": "bool"
+      },
+      "hs_google_click_id": {
+        "label": "Google ad click id",
+        "type": "string"
+      },
+      "hs_googleplusid": {
+        "label": "googleplus ID",
+        "type": "string"
+      },
+      "hs_ip_timezone": {
+        "label": "IP Timezone",
+        "type": "string"
+      },
+      "hs_is_contact": {
+        "label": "Is a contact",
+        "type": "bool"
+      },
+      "hs_last_sales_activity_date": {
+        "label": "Last Sales Activity Date",
+        "type": "datetime"
+      },
+      "hs_lastmodifieddate": {
+        "label": "Object last modified date/time",
+        "type": "datetime"
+      },
+      "hs_lead_status": {
+        "label": "Lead Status",
+        "type": "enumeration"
+      },
+      "hs_legal_basis": {
+        "label": "Legal basis for processing contact's data",
+        "type": "enumeration"
+      },
+      "hs_linkedinid": {
+        "label": "Linkedin ID",
+        "type": "string"
+      },
+      "hs_merged_object_ids": {
+        "label": "Merged object IDs",
+        "type": "enumeration"
+      },
+      "hs_object_id": {
+        "label": "Contact ID",
+        "type": "number"
+      },
+      "hs_sales_email_last_clicked": {
+        "label": "Recent Sales Email Clicked Date",
+        "type": "datetime"
+      },
+      "hs_sales_email_last_opened": {
+        "label": "Recent Sales Email Opened Date",
+        "type": "datetime"
+      },
+      "hs_searchable_calculated_international_mobile_number": {
+        "label": "Calculated Mobile Number with country code",
+        "type": "phone_number"
+      },
+      "hs_searchable_calculated_international_phone_number": {
+        "label": "Calculated Phone Number with country code",
+        "type": "phone_number"
+      },
+      "hs_searchable_calculated_mobile_number": {
+        "label": "Calculated Mobile Number without country code",
+        "type": "phone_number"
+      },
+      "hs_searchable_calculated_phone_number": {
+        "label": "Calculated Phone Number without country code",
+        "type": "phone_number"
+      },
+      "hs_sequences_is_enrolled": {
+        "label": "Currently in Sequence",
+        "type": "bool"
+      },
+      "hs_twitterid": {
+        "label": "Twitter ID",
+        "type": "string"
+      },
+      "hs_updated_by_user_id": {
+        "label": "Updated by user ID",
+        "type": "number"
+      },
+      "hubspot_owner_assigneddate": {
+        "label": "Owner Assigned Date",
+        "type": "datetime"
+      },
+      "identifiants_r_seaux_sociaux": {
+        "label": "Identifiants LinkedIn",
+        "type": "string"
+      },
+      "impact_du_buddy_sur_la_realisation_du_projet_professionnel": {
+        "label": "Impact du buddy sur la réalisation du projet professionnel M+0",
+        "type": "enumeration"
+      },
+      "impact_du_buddy_sur_les_difficultes_quotidiennes": {
+        "label": "Impact du buddy sur les difficultés quotidiennes M+0",
+        "type": "enumeration"
+      },
+      "impact_du_coach_sur_la_realisation_du_projet_professionnel": {
+        "label": "Impact du coach sur la réalisation du projet professionnel M+0",
+        "type": "enumeration"
+      },
+      "impact_du_coach_sur_les_difficultes_quotidiennes": {
+        "label": "Impact du coach sur les difficultés quotidiennes M+0",
+        "type": "enumeration"
+      },
+      "impact_du_mentor_sur_la_realisation_du_projet_professionnel": {
+        "label": "Impact du mentor sur la réalisation du projet professionnel M+0",
+        "type": "enumeration"
+      },
+      "impact_du_mentor_sur_les_difficultes_quotidiennes": {
+        "label": "Impact du mentor sur les difficultés quotidiennes M+0",
+        "type": "enumeration"
+      },
+      "influence_de_l_experience_wintegreat_sur_l_engagement_associatif": {
+        "label": "Influence de l'expérience Wintegreat sur l'engagement associatif",
+        "type": "enumeration"
+      },
+      "informations_manquantes_pour_les_accompagnants": {
+        "label": "Informations manquantes pour les accompagnants",
+        "type": "string"
+      },
+      "inscrit_p_le_emploi": {
+        "label": "Inscrit à pôle emploi",
+        "type": "enumeration"
+      },
+      "intitul_": {
+        "label": "Genre",
+        "type": "enumeration"
+      },
+      "ip_city": {
+        "label": "IP City",
+        "type": "string"
+      },
+      "ip_country": {
+        "label": "IP Country",
+        "type": "string"
+      },
+      "ip_country_code": {
+        "label": "IP Country Code",
+        "type": "string"
+      },
+      "ip_latlon": {
+        "label": "IP Latitude & Longitude",
+        "type": "string"
+      },
+      "ip_state": {
+        "label": "IP State/Region",
+        "type": "string"
+      },
+      "ip_state_code": {
+        "label": "IP State Code/Region Code",
+        "type": "string"
+      },
+      "ip_zipcode": {
+        "label": "IP Zipcode",
+        "type": "string"
+      },
+      "job_function": {
+        "label": "Job function",
+        "type": "string"
+      },
+      "jury_entretien": {
+        "label": "Jury Entretien",
+        "type": "enumeration"
+      },
+      "lastmodifieddate": {
+        "label": "Last Modified Date",
+        "type": "datetime"
+      },
+      "les_difficult_s_potentielles_la_r_alisation_du_projet_professionnel": {
+        "label": "Les difficultés potentielles à la réalisation du projet professionnel",
+        "type": "string"
+      },
+      "lien_vers_profil_linkedin": {
+        "label": "Lien vers profil Linkedin ",
+        "type": "string"
+      },
+      "m_tier": {
+        "label": "Métier",
+        "type": "string"
+      },
+      "m_tier_du_mentor_accompagnant": {
+        "label": "Métier du mentor accompagnant",
+        "type": "string"
+      },
+      "m_tier_en_france": {
+        "label": "Métier en France",
+        "type": "string"
+      },
+      "mail_du_participant_accompagn_": {
+        "label": "Mail du participant accompagné",
+        "type": "string"
+      },
+      "manques_de_la_formation_mcb": {
+        "label": "Manques de la formation MCB",
+        "type": "string"
+      },
+      "marital_status": {
+        "label": "Marital Status",
+        "type": "string"
+      },
+      "military_status": {
+        "label": "Military status",
+        "type": "string"
+      },
+      "motif_refus": {
+        "label": "Motif Refus",
+        "type": "string"
+      },
+      "motivation_confiance": {
+        "label": "Note Motivation",
+        "type": "number"
+      },
+      "motivation_pour_rejoindre_le_programme": {
+        "label": "Motivation pour rejoindre le programme",
+        "type": "string"
+      },
+      "moyen_de_garder_les_enfants": {
+        "label": "Moyen de garder les enfants",
+        "type": "enumeration"
+      },
+      "nationalit_": {
+        "label": "Nationalité",
+        "type": "enumeration"
+      },
+      "nature_du_contact": {
+        "label": "Nature du contact",
+        "type": "enumeration"
+      },
+      "niveau_d_anglais_apr_s_programme": {
+        "label": "Niveau d'anglais après programme",
+        "type": "enumeration"
+      },
+      "niveau_d_anglais_initial": {
+        "label": "Niveau d'anglais initial",
+        "type": "enumeration"
+      },
+      "niveau_d_exp_rience_professionnellle": {
+        "label": "niveau d'expérience professionnellle",
+        "type": "enumeration"
+      },
+      "niveau_d_tudes": {
+        "label": "Niveau d'études",
+        "type": "enumeration"
+      },
+      "niveau_de_fle_apr_s_programme": {
+        "label": "Niveau de FLE après programme",
+        "type": "enumeration"
+      },
+      "niveau_de_fle_initial": {
+        "label": "Niveau de FLE initial",
+        "type": "enumeration"
+      },
+      "niveau_des_cours_de_fle": {
+        "label": "Niveau des cours de FLE",
+        "type": "enumeration"
+      },
+      "nombre_d_enfants": {
+        "label": "Nombre d'enfants",
+        "type": "number"
+      },
+      "nombre_de_demenagements_depuis_les_6_derniers_mois_m_3": {
+        "label": "Nombre de déménagements depuis les 6 derniers mois M+3",
+        "type": "number"
+      },
+      "nombre_de_participants_accompagnes": {
+        "label": "Nombre de participants accompagnés",
+        "type": "number"
+      },
+      "nombre_de_semestres_engagement": {
+        "label": "Nombre de semestres engagement",
+        "type": "number"
+      },
+      "note_finale": {
+        "label": "Note finale",
+        "type": "number"
+      },
+      "num_associated_deals": {
+        "label": "Associated Deals",
+        "type": "number"
+      },
+      "num_conversion_events": {
+        "label": "Number of Form Submissions",
+        "type": "number"
+      },
+      "num_ro_candidat": {
+        "label": "numéro candidat",
+        "type": "string"
+      },
+      "num_ro_jury": {
+        "label": "Numéro Jury",
+        "type": "number"
+      },
+      "num_unique_conversion_events": {
+        "label": "Number of Unique Forms Submitted",
+        "type": "number"
+      },
+      "parcours_pro_en_france": {
+        "label": "Parcours pro en France",
+        "type": "string"
+      },
+      "parcours_pro_pays_d_origine": {
+        "label": "Parcours pro pays d'origine",
+        "type": "string"
+      },
+      "partage_de_l_experience_wintegreat_avec_son_entourage": {
+        "label": "Partage de l'expérience Wintegreat avec son entourage",
+        "type": "enumeration"
+      },
+      "participation_a_des_evenements_de_wintegreat": {
+        "label": "Participation à des événements de Wintegreat M+0",
+        "type": "enumeration"
+      },
+      "participation_a_la_session_de_formation_des_mcb_wintegreat": {
+        "label": "Participation à la session de formation des MCB Wintegreat",
+        "type": "enumeration"
+      },
+      "participe_au_programme": {
+        "label": "Participe au programme ",
+        "type": "enumeration"
+      },
+      "passions": {
+        "label": "Passions",
+        "type": "string"
+      },
+      "personne_pouvant_aider_la_r_alisation_du_projet_pro_du_participant": {
+        "label": "Personne pouvant aider à la réalisation du projet pro du participant ",
+        "type": "string"
+      },
+      "pertinence_accompagnement_wintegreat": {
+        "label": "Pertinence accompagnement Wintegreat",
+        "type": "number"
+      },
+      "photo_identit_": {
+        "label": "Photo Identité",
+        "type": "string"
+      },
+      "plus_grande_deception_dans_le_programme_wintegreat": {
+        "label": "Plus grande déception dans le programme Wintegreat M+0",
+        "type": "string"
+      },
+      "points_faibles_du_parcours_pro_m_0": {
+        "label": "Points faibles du parcours pro M+0",
+        "type": "string"
+      },
+      "points_forts_du_parcours_pro_m_0": {
+        "label": "Points forts du parcours pro M+0",
+        "type": "string"
+      },
+      "possession_diplome_en_france": {
+        "label": "Possession diplôme en France",
+        "type": "enumeration"
+      },
+      "possibilit_d_m_nagement_pour_le_programme": {
+        "label": "Possibilité déménagement pour le programme ",
+        "type": "enumeration"
+      },
+      "poste_occup_chez_wintegreat": {
+        "label": "Poste occupé chez Wintegreat",
+        "type": "enumeration"
+      },
+      "pr_cision_situation_de_logement": {
+        "label": "Précision situation de logement ",
+        "type": "string"
+      },
+      "pr_cisions_libres_et_commentaires": {
+        "label": "Précisions libres et commentaires",
+        "type": "string"
+      },
+      "pr_sence_entretien": {
+        "label": "Confirmation présence entretien",
+        "type": "enumeration"
+      },
+      "precision_de_la_contribution_des_programmes_sur_la_connaissance_des_refugies": {
+        "label": "Précision de la contribution des programmes  sur la connaissance des réfugiés",
+        "type": "string"
+      },
+      "precision_sur_le_sentiment_d_integration_en_france": {
+        "label": "Précision sur le sentiment d'intégration en France M+0",
+        "type": "string"
+      },
+      "precision_sur_le_soutien_de_l_equipe_wintegreat": {
+        "label": "Précision sur le soutien de l'équipe Wintegreat",
+        "type": "string"
+      },
+      "precisions_libres_et_commentaires_m_0": {
+        "label": "Précisions libres et commentaires M+0",
+        "type": "string"
+      },
+      "precisions_problemes_de_sante": {
+        "label": "Précisions Problèmes de santé",
+        "type": "string"
+      },
+      "precisions_sur_la_non_contribution_au_projet_professionnel_du_participant": {
+        "label": "Précisions sur la non contribution au projet professionnel du participant",
+        "type": "string"
+      },
+      "precisions_sur_la_relation_creee_avec_les_autres_accompagnants": {
+        "label": "Précisions sur la relation créée avec les autres accompagnants",
+        "type": "string"
+      },
+      "precisions_sur_la_relation_etablie_avec_le_participant": {
+        "label": "Précisions sur la relation établie avec le participant",
+        "type": "string"
+      },
+      "precisions_sur_la_sensibilisation_des_programmes_aux_benefices_de_l_integration": {
+        "label": "Précisions sur la sensibilisation des programmes aux bénéfices de l'intégration",
+        "type": "string"
+      },
+      "precisions_sur_la_volonte_de_se_reengager": {
+        "label": "Précisions sur la volonté de se réengager",
+        "type": "string"
+      },
+      "precisions_sur_le_sentiment_d_appartenance_a_la_communaute": {
+        "label": "Précisions sur le sentiment d'appartenance à la communauté",
+        "type": "string"
+      },
+      "present_aux_entretiens": {
+        "label": "Présent aux entretiens",
+        "type": "enumeration"
+      },
+      "probl_me_de_sant_signaler": {
+        "label": "Problème de santé à signaler",
+        "type": "enumeration"
+      },
+      "profil_facebook": {
+        "label": "Profil Facebook",
+        "type": "string"
+      },
+      "progression_en_anglais": {
+        "label": "Progression en anglais",
+        "type": "enumeration"
+      },
+      "progression_en_francais": {
+        "label": "Progression en français",
+        "type": "enumeration"
+      },
+      "projet_professionnel": {
+        "label": "Projet professionnel",
+        "type": "string"
+      },
+      "qualite_des_cours_de_francais": {
+        "label": "Evaluation du niveau des cours de français M+0",
+        "type": "enumeration"
+      },
+      "qualite_des_cours_de_francais_m_0": {
+        "label": "Qualité des cours de français M+0",
+        "type": "enumeration"
+      },
+      "qualite_des_cours_de_soft_skills": {
+        "label": "Satisfaction des cours de soft skills M+0",
+        "type": "enumeration"
+      },
+      "qualite_du_mentorat_en_anglais": {
+        "label": "Qualité des cours d'anglais M+0",
+        "type": "enumeration"
+      },
+      "question_que_le_participant_se_pose": {
+        "label": "Question que le participant se pose ",
+        "type": "string"
+      },
+      "r_le": {
+        "label": "Rôle ",
+        "type": "enumeration"
+      },
+      "r_ponses_envoy_s": {
+        "label": "Réponses envoyés",
+        "type": "enumeration"
+      },
+      "recent_conversion_date": {
+        "label": "Recent Conversion Date",
+        "type": "datetime"
+      },
+      "recent_conversion_event_name": {
+        "label": "Recent Conversion",
+        "type": "string"
+      },
+      "recent_deal_amount": {
+        "label": "Recent Deal Amount",
+        "type": "number"
+      },
+      "recent_deal_close_date": {
+        "label": "Recent Deal Close Date",
+        "type": "datetime"
+      },
+      "recommandation_de_wintegreat_a_un_ami": {
+        "label": "Recommandation de Wintegreat à un ami M+0",
+        "type": "enumeration"
+      },
+      "relationship_status": {
+        "label": "Relationship Status",
+        "type": "string"
+      },
+      "resultat_test_de_fle": {
+        "label": "Resultat test de FLE ",
+        "type": "enumeration"
+      },
+      "rib": {
+        "label": "RIB",
+        "type": "string"
+      },
+      "risque_candidature": {
+        "label": "Risque Candidature",
+        "type": "string"
+      },
+      "risque_du_dernier_probl_me_identifi_": {
+        "label": "Risque du dernier problème identifié",
+        "type": "number"
+      },
+      "satisfaction_de_l_accompagnement_par_le_buddy": {
+        "label": "Satisfaction de l'accompagnement par le buddy M+0",
+        "type": "enumeration"
+      },
+      "satisfaction_de_l_accompagnement_par_le_coach": {
+        "label": "Satisfaction de l'accompagnement par le coach M+0",
+        "type": "enumeration"
+      },
+      "satisfaction_de_l_accompagnement_par_le_mentor": {
+        "label": "Satisfaction de l'accompagnement par le mentor M+0",
+        "type": "enumeration"
+      },
+      "satisfaction_de_la_formation_mcb": {
+        "label": "Satisfaction de la formation MCB",
+        "type": "enumeration"
+      },
+      "satisfaction_des_outils_mis_a_disposition_des_accompagnants": {
+        "label": "Satisfaction des outils mis à disposition des accompagnants",
+        "type": "enumeration"
+      },
+      "satisfaction_des_services_offerts_par_l_universite": {
+        "label": "Satisfaction des services offerts par l'université M+0",
+        "type": "enumeration"
+      },
+      "satisfaction_du_nombre_d_heure_de_soft_skills": {
+        "label": "Satisfaction du nombre d'heures de soft skills",
+        "type": "enumeration"
+      },
+      "satisfaction_du_nombre_d_heure_en_general": {
+        "label": "Satisfaction du nombre d'heure en général M+0",
+        "type": "enumeration"
+      },
+      "satisfaction_du_nombre_d_heures_d_anglais_m_0": {
+        "label": "Satisfaction du nombre d'heures d'anglais M+0",
+        "type": "enumeration"
+      },
+      "satisfaction_du_nombre_d_heures_de_francais": {
+        "label": "Satisfaction du nombre d'heures de français M+0",
+        "type": "enumeration"
+      },
+      "satisfaction_du_trio_d_accompagnement": {
+        "label": "Satisfaction du trio d'accompagnement",
+        "type": "string"
+      },
+      "satisfaction_globale_de_wintegreat": {
+        "label": "Satisfaction globale de Wintegreat M+0",
+        "type": "enumeration"
+      },
+      "satisfaction_logement_avant_programme": {
+        "label": "Satisfaction logement avant programme",
+        "type": "enumeration"
+      },
+      "satisfaction_logement_m_3": {
+        "label": "Satisfaction logement M+3",
+        "type": "enumeration"
+      },
+      "satisfaction_parcours_pro_m_0": {
+        "label": "Satisfaction parcours pro M+0",
+        "type": "enumeration"
+      },
+      "satisfaction_personnelle_debut_de_programme": {
+        "label": "Satisfaction personnelle début de programme",
+        "type": "enumeration"
+      },
+      "satisfaction_role_accompagnant": {
+        "label": "Satisfaction rôle accompagnant",
+        "type": "enumeration"
+      },
+      "school": {
+        "label": "School",
+        "type": "string"
+      },
+      "secteur_familier": {
+        "label": "Secteur familié",
+        "type": "enumeration"
+      },
+      "secteur_professionnel": {
+        "label": "Secteurs professionnels",
+        "type": "enumeration"
+      },
+      "semestre": {
+        "label": "Semestre",
+        "type": "enumeration"
+      },
+      "semestre_candidature": {
+        "label": "Semestre candidature ",
+        "type": "enumeration"
+      },
+      "seniority": {
+        "label": "Seniority",
+        "type": "string"
+      },
+      "sensation_d_etre_aime_et_apprecie_debut_de_programme": {
+        "label": "Sensation d'être aimé et apprécié début de programme",
+        "type": "enumeration"
+      },
+      "sensation_d_etre_integre_a_l_universite": {
+        "label": "Sensation d'être intégré à l'université M+0",
+        "type": "enumeration"
+      },
+      "sentiment_d_avoir_t_aim_et_appr_ci_": {
+        "label": "Sentiment d'avoir été aimé et apprécié",
+        "type": "enumeration"
+      },
+      "sentiment_d_integration_dans_la_societe_francaise": {
+        "label": "Sentiment d'intégration dans la société française M+0",
+        "type": "enumeration"
+      },
+      "signataire_du_contrat_d_int_gration_r_publicaine_cir_": {
+        "label": "Signataire du Contrat d'Intégration Républicaine (CIR)",
+        "type": "enumeration"
+      },
+      "situation_de_sortie_m_0": {
+        "label": "Situation de sortie M+0",
+        "type": "enumeration"
+      },
+      "situation_de_sortie_m_3": {
+        "label": "Situation de sortie M+3",
+        "type": "enumeration"
+      },
+      "situation_professionnel_durant_candidature": {
+        "label": "Situation professionnelle durant candidature ",
+        "type": "enumeration"
+      },
+      "source_de_la_connaissance_de_wintegreat": {
+        "label": "Source de la connaissance de Wintegreat  ",
+        "type": "enumeration"
+      },
+      "start_date": {
+        "label": "Start date",
+        "type": "string"
+      },
+      "statut_candidature": {
+        "label": "Statut candidature ",
+        "type": "enumeration"
+      },
+      "statut_l_gal": {
+        "label": "Statut légal",
+        "type": "enumeration"
+      },
+      "statut_personnel": {
+        "label": "Statut personnel",
+        "type": "enumeration"
+      },
+      "suggestion_d_amelioration_dans_la_relation_avec_le_participant": {
+        "label": "Suggestion d'amélioration dans la relation avec le participant",
+        "type": "string"
+      },
+      "suggestion_d_amelioration_des_cours_de_soft_skills_m_0": {
+        "label": "Suggestion d'amélioration des cours de soft skills M+0",
+        "type": "string"
+      },
+      "suggestion_d_amelioration_des_outils_mis_a_disposition_des_accompagnants": {
+        "label": "Suggestion d'amélioration des outils mis à disposition des accompagnants",
+        "type": "string"
+      },
+      "suggestion_pour_ameliorer_le_programme": {
+        "label": "Suggestion pour améliorer le programme M+0",
+        "type": "string"
+      },
+      "suggestion_pour_l_amelioration_des_programmes": {
+        "label": "Suggestion pour l'amélioration de l'expérience des programmes pour les autres participants M+0",
+        "type": "string"
+      },
+      "tablissement_d_tude": {
+        "label": "Établissement d'étude",
+        "type": "string"
+      },
+      "total_revenue": {
+        "label": "Total Revenue",
+        "type": "number"
+      },
+      "travail_pendant_le_programme": {
+        "label": "Travail pendant le programme M+0",
+        "type": "enumeration"
+      },
+      "travailleur_handicap_": {
+        "label": "Travailleur Handicapé",
+        "type": "enumeration"
+      },
+      "type_contact": {
+        "label": "type contact",
+        "type": "enumeration"
+      },
+      "type_de_contrat": {
+        "label": "Contrat de votre travail  France",
+        "type": "enumeration"
+      },
+      "type_de_logement": {
+        "label": "Type de logement avant programme",
+        "type": "enumeration"
+      },
+      "type_de_logement_actuel_m_3": {
+        "label": "Type de logement actuel M+0",
+        "type": "enumeration"
+      },
+      "type_de_titre_de_s_jour": {
+        "label": "Type de titre de séjour",
+        "type": "enumeration"
+      },
+      "utilite_de_administration": {
+        "label": "Utilité de administration",
+        "type": "enumeration"
+      },
+      "ville_programme": {
+        "label": "Ville programme",
+        "type": "enumeration"
+      },
+      "volont_de_reprise_d_tudes": {
+        "label": "Volonté de reprise d'études",
+        "type": "enumeration"
+      },
+      "volonte_de_prendre_part_a_un_projet_a_fort_impact_dans_le_futur": {
+        "label": "Volonté de prendre part à un projet à fort impact dans le futur",
+        "type": "enumeration"
+      },
+      "volonte_de_s_engager_pour_un_nouveau_programme": {
+        "label": "Volonté de s'engager pour un nouveau programme",
+        "type": "enumeration"
+      },
+      "work_email": {
+        "label": "Work email",
+        "type": "string"
+      },
+      "firstname": {
+        "label": "First Name",
+        "type": "string"
+      },
+      "hs_analytics_first_url": {
+        "label": "First Page Seen",
+        "type": "string"
+      },
+      "hs_email_delivered": {
+        "label": "Marketing emails delivered",
+        "type": "number"
+      },
+      "hs_email_optout_5649280": {
+        "label": "Opted out of email: One to One",
+        "type": "enumeration"
+      },
+      "hs_email_optout_7214121": {
+        "label": "Opted out of email: Customer Service Communication",
+        "type": "enumeration"
+      },
+      "hs_email_optout_7286274": {
+        "label": "Opted out of email: Marketing Information",
+        "type": "enumeration"
+      },
+      "hs_email_optout_7436950": {
+        "label": "Opted out of email: Abonnement email RGPD",
+        "type": "enumeration"
+      },
+      "twitterhandle": {
+        "label": "Twitter Username",
+        "type": "string"
+      },
+      "currentlyinworkflow": {
+        "label": "Currently in workflow",
+        "type": "enumeration"
+      },
+      "followercount": {
+        "label": "Follower Count",
+        "type": "number"
+      },
+      "hs_analytics_last_url": {
+        "label": "Last Page Seen",
+        "type": "string"
+      },
+      "hs_email_open": {
+        "label": "Marketing emails opened",
+        "type": "number"
+      },
+      "lastname": {
+        "label": "Last Name",
+        "type": "string"
+      },
+      "hs_analytics_num_page_views": {
+        "label": "Number of Pageviews",
+        "type": "number"
+      },
+      "hs_email_click": {
+        "label": "Marketing emails clicked",
+        "type": "number"
+      },
+      "salutation": {
+        "label": "Salutation",
+        "type": "string"
+      },
+      "twitterprofilephoto": {
+        "label": "Twitter Profile Photo",
+        "type": "string"
+      },
+      "email": {
+        "label": "Email",
+        "type": "string"
+      },
+      "hs_analytics_num_visits": {
+        "label": "Number of Sessions",
+        "type": "number"
+      },
+      "hs_email_bounce": {
+        "label": "Marketing emails bounced",
+        "type": "number"
+      },
+      "hs_persona": {
+        "label": "Persona",
+        "type": "enumeration"
+      },
+      "hs_social_last_engagement": {
+        "label": "Most Recent Social Click",
+        "type": "datetime"
+      },
+      "hs_analytics_num_event_completions": {
+        "label": "Number of event completions",
+        "type": "number"
+      },
+      "hs_email_optout": {
+        "label": "Unsubscribed from all email",
+        "type": "bool"
+      },
+      "hs_social_twitter_clicks": {
+        "label": "Twitter Clicks",
+        "type": "number"
+      },
+      "mobilephone": {
+        "label": "Mobile Phone Number",
+        "type": "string"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "type": "string"
+      },
+      "fax": {
+        "label": "Fax Number",
+        "type": "string"
+      },
+      "hs_analytics_first_timestamp": {
+        "label": "Time First Seen",
+        "type": "datetime"
+      },
+      "hs_email_last_email_name": {
+        "label": "Last marketing email name",
+        "type": "string"
+      },
+      "hs_email_last_send_date": {
+        "label": "Last marketing email send date",
+        "type": "datetime"
+      },
+      "hs_social_facebook_clicks": {
+        "label": "Facebook Clicks",
+        "type": "number"
+      },
+      "address": {
+        "label": "Street Address",
+        "type": "string"
+      },
+      "engagements_last_meeting_booked": {
+        "label": "Last Meetings Tool Submission",
+        "type": "datetime"
+      },
+      "engagements_last_meeting_booked_campaign": {
+        "label": "Last Meetings Tool Submission Campaign",
+        "type": "string"
+      },
+      "engagements_last_meeting_booked_medium": {
+        "label": "Last Meetings Tool Submission Medium",
+        "type": "string"
+      },
+      "engagements_last_meeting_booked_source": {
+        "label": "Last Meetings Tool Submission Source",
+        "type": "string"
+      },
+      "hs_analytics_first_visit_timestamp": {
+        "label": "Time of First Session",
+        "type": "datetime"
+      },
+      "hs_email_last_open_date": {
+        "label": "Last marketing email open date",
+        "type": "datetime"
+      },
+      "hs_sales_email_last_replied": {
+        "label": "Recent Sales Email Replied Date",
+        "type": "datetime"
+      },
+      "hs_social_linkedin_clicks": {
+        "label": "LinkedIn Clicks",
+        "type": "number"
+      },
+      "hubspot_owner_id": {
+        "label": "Contact owner",
+        "type": "enumeration"
+      },
+      "notes_last_contacted": {
+        "label": "Last Contacted",
+        "type": "datetime"
+      },
+      "notes_last_updated": {
+        "label": "Last Activity Date",
+        "type": "datetime"
+      },
+      "notes_next_activity_date": {
+        "label": "Next Activity Date",
+        "type": "datetime"
+      },
+      "num_contacted_notes": {
+        "label": "Number of times contacted",
+        "type": "number"
+      },
+      "num_notes": {
+        "label": "Number of Sales Activities",
+        "type": "number"
+      },
+      "surveymonkeyeventlastupdated": {
+        "label": "SurveyMonkey Event Last Updated",
+        "type": "number"
+      },
+      "webinareventlastupdated": {
+        "label": "Webinar Event Last Updated",
+        "type": "number"
+      },
+      "city": {
+        "label": "City",
+        "type": "string"
+      },
+      "hs_analytics_last_timestamp": {
+        "label": "Time Last Seen",
+        "type": "datetime"
+      },
+      "hs_email_last_click_date": {
+        "label": "Last marketing email click date",
+        "type": "datetime"
+      },
+      "hs_social_google_plus_clicks": {
+        "label": "Google Plus Clicks",
+        "type": "number"
+      },
+      "hubspot_team_id": {
+        "label": "HubSpot Team",
+        "type": "enumeration"
+      },
+      "linkedinbio": {
+        "label": "LinkedIn Bio",
+        "type": "string"
+      },
+      "twitterbio": {
+        "label": "Twitter Bio",
+        "type": "string"
+      },
+      "hs_all_owner_ids": {
+        "label": "All owner ids",
+        "type": "enumeration"
+      },
+      "hs_analytics_last_visit_timestamp": {
+        "label": "Time of Last Session",
+        "type": "datetime"
+      },
+      "hs_email_first_send_date": {
+        "label": "First marketing email send date",
+        "type": "datetime"
+      },
+      "hs_social_num_broadcast_clicks": {
+        "label": "Broadcast Clicks",
+        "type": "number"
+      },
+      "state": {
+        "label": "State/Region",
+        "type": "string"
+      },
+      "hs_all_team_ids": {
+        "label": "All team ids",
+        "type": "enumeration"
+      },
+      "hs_analytics_source": {
+        "label": "Original Source",
+        "type": "enumeration"
+      },
+      "hs_email_first_open_date": {
+        "label": "First marketing email open date",
+        "type": "datetime"
+      },
+      "zip": {
+        "label": "Postal Code",
+        "type": "string"
+      },
+      "country": {
+        "label": "Country/Region",
+        "type": "string"
+      },
+      "hs_all_accessible_team_ids": {
+        "label": "All accessible team ids",
+        "type": "enumeration"
+      },
+      "hs_analytics_source_data_1": {
+        "label": "Original Source Drill-Down 1",
+        "type": "string"
+      },
+      "hs_email_first_click_date": {
+        "label": "First marketing email click date",
+        "type": "datetime"
+      },
+      "linkedinconnections": {
+        "label": "LinkedIn Connections",
+        "type": "number"
+      },
+      "hs_analytics_source_data_2": {
+        "label": "Original Source Drill-Down 2",
+        "type": "string"
+      },
+      "hs_email_is_ineligible": {
+        "label": "Is globally ineligible",
+        "type": "bool"
+      },
+      "hs_language": {
+        "label": "Preferred language",
+        "type": "enumeration"
+      },
+      "kloutscoregeneral": {
+        "label": "Klout Score",
+        "type": "number"
+      },
+      "hs_analytics_first_referrer": {
+        "label": "First Referring Site",
+        "type": "string"
+      },
+      "jobtitle": {
+        "label": "Job Title",
+        "type": "string"
+      },
+      "photo": {
+        "label": "Photo",
+        "type": "string"
+      },
+      "hs_analytics_last_referrer": {
+        "label": "Last Referring Site",
+        "type": "string"
+      },
+      "message": {
+        "label": "Message",
+        "type": "string"
+      },
+      "closedate": {
+        "label": "Close Date",
+        "type": "datetime"
+      },
+      "hs_analytics_average_page_views": {
+        "label": "Average Pageviews",
+        "type": "number"
+      },
+      "hs_analytics_revenue": {
+        "label": "Event Revenue",
+        "type": "number"
+      },
+      "hs_lifecyclestage_lead_date": {
+        "label": "Became a Lead Date",
+        "type": "datetime"
+      },
+      "hs_lifecyclestage_marketingqualifiedlead_date": {
+        "label": "Became a Marketing Qualified Lead Date",
+        "type": "datetime"
+      },
+      "hs_lifecyclestage_opportunity_date": {
+        "label": "Became an Opportunity Date",
+        "type": "datetime"
+      },
+      "lifecyclestage": {
+        "label": "Lifecycle Stage",
+        "type": "enumeration"
+      },
+      "hs_lifecyclestage_salesqualifiedlead_date": {
+        "label": "Became a Sales Qualified Lead Date",
+        "type": "datetime"
+      },
+      "createdate": {
+        "label": "Create Date",
+        "type": "datetime"
+      },
+      "hs_lifecyclestage_evangelist_date": {
+        "label": "Became an Evangelist Date",
+        "type": "datetime"
+      },
+      "hs_lifecyclestage_customer_date": {
+        "label": "Became a Customer Date",
+        "type": "datetime"
+      },
+      "hubspotscore": {
+        "label": "HubSpot Score",
+        "type": "number"
+      },
+      "company": {
+        "label": "Company Name",
+        "type": "string"
+      },
+      "hs_lifecyclestage_subscriber_date": {
+        "label": "Became a Subscriber Date",
+        "type": "datetime"
+      },
+      "hs_lifecyclestage_other_date": {
+        "label": "Became an Other Lifecycle Date",
+        "type": "datetime"
+      },
+      "website": {
+        "label": "Website URL",
+        "type": "string"
+      },
+      "numemployees": {
+        "label": "Number of Employees",
+        "type": "enumeration"
+      },
+      "annualrevenue": {
+        "label": "Annual Revenue",
+        "type": "string"
+      },
+      "industry": {
+        "label": "Industry",
+        "type": "enumeration"
+      },
+      "associatedcompanyid": {
+        "label": "Associated Company ID",
+        "type": "number"
+      },
+      "associatedcompanylastupdated": {
+        "label": "Associated Company Last Updated",
+        "type": "number"
+      }
+    },
+    "exclude": []
+  },
+  "company": {
+    "properties": {
+      "about_us": {
+        "label": "About Us",
+        "type": "string"
+      },
+      "closedate_timestamp_earliest_value_a2a17e6e": {
+        "label": "closedate_timestamp_earliest_value_a2a17e6e",
+        "type": "datetime"
+      },
+      "facebookfans": {
+        "label": "Facebook Fans",
+        "type": "number"
+      },
+      "first_contact_createdate_timestamp_earliest_value_78b50eea": {
+        "label": "first_contact_createdate_timestamp_earliest_value_78b50eea",
+        "type": "datetime"
+      },
+      "first_conversion_date": {
+        "label": "First Conversion Date",
+        "type": "datetime"
+      },
+      "first_conversion_date_timestamp_earliest_value_61f58f2c": {
+        "label": "first_conversion_date_timestamp_earliest_value_61f58f2c",
+        "type": "datetime"
+      },
+      "first_conversion_event_name": {
+        "label": "First Conversion",
+        "type": "string"
+      },
+      "first_conversion_event_name_timestamp_earliest_value_68ddae0a": {
+        "label": "first_conversion_event_name_timestamp_earliest_value_68ddae0a",
+        "type": "datetime"
+      },
+      "first_deal_created_date": {
+        "label": "First Deal Created Date",
+        "type": "datetime"
+      },
+      "founded_year": {
+        "label": "Year Founded",
+        "type": "string"
+      },
+      "hs_additional_domains": {
+        "label": "Additional Domains",
+        "type": "enumeration"
+      },
+      "hs_analytics_first_timestamp": {
+        "label": "Time First Seen",
+        "type": "datetime"
+      },
+      "hs_analytics_first_timestamp_timestamp_earliest_value_11e3a63a": {
+        "label": "hs_analytics_first_timestamp_timestamp_earliest_value_11e3a63a",
+        "type": "datetime"
+      },
+      "hs_analytics_first_touch_converting_campaign": {
+        "label": "First Touch Converting Campaign",
+        "type": "string"
+      },
+      "hs_analytics_first_touch_converting_campaign_timestamp_earliest_value_4757fe10": {
+        "label": "hs_analytics_first_touch_converting_campaign_timestamp_earliest_value_4757fe10",
+        "type": "datetime"
+      },
+      "hs_analytics_first_visit_timestamp": {
+        "label": "Time of First Session",
+        "type": "datetime"
+      },
+      "hs_analytics_first_visit_timestamp_timestamp_earliest_value_accc17ae": {
+        "label": "hs_analytics_first_visit_timestamp_timestamp_earliest_value_accc17ae",
+        "type": "datetime"
+      },
+      "hs_analytics_last_timestamp": {
+        "label": "Time Last Seen",
+        "type": "datetime"
+      },
+      "hs_analytics_last_timestamp_timestamp_latest_value_4e16365a": {
+        "label": "hs_analytics_last_timestamp_timestamp_latest_value_4e16365a",
+        "type": "datetime"
+      },
+      "hs_analytics_last_touch_converting_campaign": {
+        "label": "Last Touch Converting Campaign",
+        "type": "string"
+      },
+      "hs_analytics_last_touch_converting_campaign_timestamp_latest_value_81a64e30": {
+        "label": "hs_analytics_last_touch_converting_campaign_timestamp_latest_value_81a64e30",
+        "type": "datetime"
+      },
+      "hs_analytics_last_visit_timestamp": {
+        "label": "Time of Last Session",
+        "type": "datetime"
+      },
+      "hs_analytics_last_visit_timestamp_timestamp_latest_value_999a0fce": {
+        "label": "hs_analytics_last_visit_timestamp_timestamp_latest_value_999a0fce",
+        "type": "datetime"
+      },
+      "hs_analytics_num_page_views": {
+        "label": "Number of Pageviews",
+        "type": "number"
+      },
+      "hs_analytics_num_page_views_cardinality_sum_e46e85b0": {
+        "label": "hs_analytics_num_page_views_cardinality_sum_e46e85b0",
+        "type": "number"
+      },
+      "hs_analytics_num_visits": {
+        "label": "Number of Sessions",
+        "type": "number"
+      },
+      "hs_analytics_num_visits_cardinality_sum_53d952a6": {
+        "label": "hs_analytics_num_visits_cardinality_sum_53d952a6",
+        "type": "number"
+      },
+      "hs_analytics_source": {
+        "label": "Original Source Type",
+        "type": "enumeration"
+      },
+      "hs_analytics_source_data_1": {
+        "label": "Original Source Data 1",
+        "type": "string"
+      },
+      "hs_analytics_source_data_1_timestamp_earliest_value_9b2f1fa1": {
+        "label": "hs_analytics_source_data_1_timestamp_earliest_value_9b2f1fa1",
+        "type": "datetime"
+      },
+      "hs_analytics_source_data_2": {
+        "label": "Original Source Data 2",
+        "type": "string"
+      },
+      "hs_analytics_source_data_2_timestamp_earliest_value_9b2f9400": {
+        "label": "hs_analytics_source_data_2_timestamp_earliest_value_9b2f9400",
+        "type": "datetime"
+      },
+      "hs_analytics_source_timestamp_earliest_value_25a3a52c": {
+        "label": "hs_analytics_source_timestamp_earliest_value_25a3a52c",
+        "type": "datetime"
+      },
+      "hs_avatar_filemanager_key": {
+        "label": "Avatar FileManager key",
+        "type": "string"
+      },
+      "hs_created_by_user_id": {
+        "label": "Created by user ID",
+        "type": "number"
+      },
+      "hs_createdate": {
+        "label": "Object create date/time",
+        "type": "datetime"
+      },
+      "hs_lastmodifieddate": {
+        "label": "Last Modified Date",
+        "type": "datetime"
+      },
+      "hs_merged_object_ids": {
+        "label": "Merged object IDs",
+        "type": "enumeration"
+      },
+      "hs_object_id": {
+        "label": "Company ID",
+        "type": "number"
+      },
+      "hs_predictivecontactscore_v2_next_max_max_d4e58c1e": {
+        "label": "hs_predictivecontactscore_v2_next_max_max_d4e58c1e",
+        "type": "number"
+      },
+      "hs_target_account": {
+        "label": "Target Account",
+        "type": "enumeration"
+      },
+      "hs_updated_by_user_id": {
+        "label": "Updated by user ID",
+        "type": "number"
+      },
+      "hubspot_owner_assigneddate": {
+        "label": "Owner Assigned Date",
+        "type": "datetime"
+      },
+      "is_public": {
+        "label": "Is Public",
+        "type": "bool"
+      },
+      "num_associated_contacts": {
+        "label": "Associated Contacts",
+        "type": "number"
+      },
+      "num_associated_deals": {
+        "label": "Associated Deals",
+        "type": "number"
+      },
+      "num_conversion_events": {
+        "label": "Number of Form Submissions",
+        "type": "number"
+      },
+      "num_conversion_events_cardinality_sum_d095f14b": {
+        "label": "num_conversion_events_cardinality_sum_d095f14b",
+        "type": "number"
+      },
+      "recent_conversion_date": {
+        "label": "Recent Conversion Date",
+        "type": "datetime"
+      },
+      "recent_conversion_date_timestamp_latest_value_72856da1": {
+        "label": "recent_conversion_date_timestamp_latest_value_72856da1",
+        "type": "datetime"
+      },
+      "recent_conversion_event_name": {
+        "label": "Recent Conversion",
+        "type": "string"
+      },
+      "recent_conversion_event_name_timestamp_latest_value_66c820bf": {
+        "label": "recent_conversion_event_name_timestamp_latest_value_66c820bf",
+        "type": "datetime"
+      },
+      "recent_deal_amount": {
+        "label": "Recent Deal Amount",
+        "type": "number"
+      },
+      "recent_deal_close_date": {
+        "label": "Recent Deal Close Date",
+        "type": "datetime"
+      },
+      "timezone": {
+        "label": "Time Zone",
+        "type": "string"
+      },
+      "total_money_raised": {
+        "label": "Total Money Raised",
+        "type": "string"
+      },
+      "total_revenue": {
+        "label": "Total Revenue",
+        "type": "number"
+      },
+      "name": {
+        "label": "Name",
+        "type": "string"
+      },
+      "twitterhandle": {
+        "label": "Twitter Handle",
+        "type": "string"
+      },
+      "phone": {
+        "label": "Phone Number",
+        "type": "string"
+      },
+      "twitterbio": {
+        "label": "Twitter Bio",
+        "type": "string"
+      },
+      "twitterfollowers": {
+        "label": "Twitter Followers",
+        "type": "number"
+      },
+      "address": {
+        "label": "Street Address",
+        "type": "string"
+      },
+      "address2": {
+        "label": "Street Address 2",
+        "type": "string"
+      },
+      "facebook_company_page": {
+        "label": "Facebook Company Page",
+        "type": "string"
+      },
+      "city": {
+        "label": "City",
+        "type": "string"
+      },
+      "linkedin_company_page": {
+        "label": "LinkedIn Company Page",
+        "type": "string"
+      },
+      "linkedinbio": {
+        "label": "LinkedIn Bio",
+        "type": "string"
+      },
+      "state": {
+        "label": "State/Region",
+        "type": "string"
+      },
+      "googleplus_page": {
+        "label": "Google Plus Page",
+        "type": "string"
+      },
+      "engagements_last_meeting_booked": {
+        "label": "Last Meetings Tool Submission",
+        "type": "datetime"
+      },
+      "engagements_last_meeting_booked_campaign": {
+        "label": "Last Meetings Tool Submission Campaign",
+        "type": "string"
+      },
+      "engagements_last_meeting_booked_medium": {
+        "label": "Last Meetings Tool Submission Medium",
+        "type": "string"
+      },
+      "engagements_last_meeting_booked_source": {
+        "label": "Last Meetings Tool Submission Source",
+        "type": "string"
+      },
+      "hs_sales_email_last_replied": {
+        "label": "Recent Sales Email Replied Date",
+        "type": "datetime"
+      },
+      "hubspot_owner_id": {
+        "label": "Company owner",
+        "type": "enumeration"
+      },
+      "notes_last_contacted": {
+        "label": "Last Contacted",
+        "type": "datetime"
+      },
+      "notes_last_updated": {
+        "label": "Last Activity Date",
+        "type": "datetime"
+      },
+      "notes_next_activity_date": {
+        "label": "Next Activity Date",
+        "type": "datetime"
+      },
+      "num_contacted_notes": {
+        "label": "Number of times contacted",
+        "type": "number"
+      },
+      "num_notes": {
+        "label": "Number of Sales Activities",
+        "type": "number"
+      },
+      "zip": {
+        "label": "Postal Code",
+        "type": "string"
+      },
+      "country": {
+        "label": "Country/Region",
+        "type": "string"
+      },
+      "hubspot_team_id": {
+        "label": "HubSpot Team",
+        "type": "enumeration"
+      },
+      "hs_all_owner_ids": {
+        "label": "All owner ids",
+        "type": "enumeration"
+      },
+      "website": {
+        "label": "Website URL",
+        "type": "string"
+      },
+      "domain": {
+        "label": "Company Domain Name",
+        "type": "string"
+      },
+      "hs_all_team_ids": {
+        "label": "All team ids",
+        "type": "enumeration"
+      },
+      "hs_all_accessible_team_ids": {
+        "label": "All accessible team ids",
+        "type": "enumeration"
+      },
+      "numberofemployees": {
+        "label": "Number of Employees",
+        "type": "number"
+      },
+      "industry": {
+        "label": "Industry",
+        "type": "enumeration"
+      },
+      "annualrevenue": {
+        "label": "Annual Revenue",
+        "type": "number"
+      },
+      "lifecyclestage": {
+        "label": "Lifecycle Stage",
+        "type": "enumeration"
+      },
+      "hs_lead_status": {
+        "label": "Lead Status",
+        "type": "enumeration"
+      },
+      "hs_parent_company_id": {
+        "label": "Parent Company",
+        "type": "number"
+      },
+      "type": {
+        "label": "Type",
+        "type": "enumeration"
+      },
+      "description": {
+        "label": "Description",
+        "type": "string"
+      },
+      "hs_num_child_companies": {
+        "label": "Number of child companies",
+        "type": "number"
+      },
+      "hubspotscore": {
+        "label": "HubSpot Score",
+        "type": "number"
+      },
+      "createdate": {
+        "label": "Create Date",
+        "type": "datetime"
+      },
+      "closedate": {
+        "label": "Close Date",
+        "type": "datetime"
+      },
+      "first_contact_createdate": {
+        "label": "First Contact Create Date",
+        "type": "datetime"
+      },
+      "days_to_close": {
+        "label": "Days to Close",
+        "type": "number"
+      },
+      "web_technologies": {
+        "label": "Web Technologies",
+        "type": "enumeration"
+      }
+    },
+    "exclude": []
+  }
+}

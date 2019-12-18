@@ -3,7 +3,7 @@ const hubspot = require('./lib/hubspot')
 const bigqueryLib = require('./lib/bigquery')
 const hs = hubspot.getClient(config.hubspot.apiKey)
 const fs = require('fs')
-const { getProperty } = require('./lib/utils')
+const { getProperty, castType } = require('./lib/utils')
 
 module.exports = {
   run: async function () {
@@ -34,10 +34,16 @@ module.exports = {
         }
         console.log("------------------ Got data ------------------")
         // Modification de la structure des données pour l'adaptation vers Bigquery
-        bqContacts = contactsInfos.map(function (contact) {
+        const bqContacts = contactsInfos.map(function (contact) {
           const temp = {}
+          let i = 0
           for (property_name in properties) {
-            temp[property_name] = getProperty(property_name, contact)
+            try {
+              const propValue = getProperty(property_name, contact)
+              temp[property_name] = castType(propValue, properties[property_name].type)
+            } catch (err) {
+              throw new Exception(err.message)
+            }
           }
           return temp
         })
@@ -49,17 +55,16 @@ module.exports = {
           table.insert(bqContacts, (err, apiResponse) => {
             if (err) {
               console.log(`Error when inserting data to table`)
-              console.log(err.errors)
+              console.log(err.response.insertErrors[0].errors)
             }
             else {
               console.log(`Data inserted`)
               console.log("-------------------- UPDATING last.json ---------------------")
               // MISE A JOUR DU FICHIER last.json 
-              contactOffset = { ...contactOffset, ...{ vidOffset: contacts[0]['canonical-vid'], timeOffset: contacts[0].addedAt } }
+              contactOffset = { ...contactOffset, ...{ vidOffset: contactsInfos[0]['canonical-vid'], timeOffset: contactsInfos[0].addedAt } }
               fs.writeFileSync(config.hubspot.lastOffsetLocation, JSON.stringify({ contact: contactOffset }))
               console.log("--------------------- last.json UPDATED ----------------------")
             }
-            console.log(apiResponse)
           })
           console.log("===================== TASK DONE =========================")
         } else {

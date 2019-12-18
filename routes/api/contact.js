@@ -3,7 +3,7 @@ var router = require('express').Router()
 router.post('/migrate', async function (req, res, next) {
   try {
     const task = require('../../services/contact.service')
-    task.run();
+    await task.run();
     res.json({
       message: "Task done successfully!",
       status: "done"

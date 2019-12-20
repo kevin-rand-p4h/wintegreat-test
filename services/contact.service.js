@@ -16,7 +16,7 @@ module.exports = {
       const properties = JSON.parse(fs.readFileSync(config.hubspot.propertiesLocation)).contact.properties
 
       let opts = {
-        count: config.hubspot.contactRequest.count
+        count: config.hubspot.requestCount.count
       }
       let keepRunning = true
 

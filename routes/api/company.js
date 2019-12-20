@@ -22,8 +22,8 @@ router.post('/migrate', async function (req, res, next) {
 //Update contacts properties
 router.post('/properties/update', async function (req, res, next) {
   try {
-    const contactService = require('../../services/company.service')
-    contactService.update()
+    const companyService = require('../../services/company.service')
+    companyService.updateProperties()
     res.json({
       message: "Companies Properties update done successfully!",
       status: "done"
@@ -32,7 +32,48 @@ router.post('/properties/update', async function (req, res, next) {
     res.json({
       message: "Got an error",
       details: [
-        err
+        err.message
+      ],
+      status: "error"
+    })
+  }
+})
+
+//Update contacts schema
+router.post('/schema/update', async function (req, res, next) {
+  try {
+    const companyService = require('../../services/company.service')
+    const schema = await companyService.updateSchema('company')
+    res.json({
+      message: "Companies Properties update done successfully!",
+      data: schema,
+      status: "done"
+    })
+  } catch (err) {
+    res.json({
+      message: "Got an error",
+      details: [
+        err.message
+      ],
+      status: "error"
+    })
+  }
+})
+
+//Create contact table
+router.post('/create', async function (req, res, next) {
+  try {
+    const companyService = require('../../services/company.service')
+    await companyService.createTable('contact')
+    res.json({
+      message: "Companies table created successfully!",
+      status: "done"
+    })
+  } catch (err) {
+    res.json({
+      message: "Got an error",
+      details: [
+        err.message
       ],
       status: "error"
     })

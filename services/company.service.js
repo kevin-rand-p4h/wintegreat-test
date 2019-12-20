@@ -1,83 +1,105 @@
 const config = require('../config');
 const hubspot = require('./lib/hubspot')
-const bigquery = require('./lib/bigquery')
+const bigqueryLib = require('./lib/bigquery')
 const hs = hubspot.getClient(config.hubspot.apiKey)
-const bq = bigquery.getClient(config.bigquery.projectId, config.bigquery.keyFileName)
 const fs = require('fs')
-const { getProperty } = require('./lib/utils')
+const { getProperty, castType } = require('./lib/utils')
 
 module.exports = {
   run: async function () {
     try {
       console.log("================== TASK BEGIN ====================")
-      const dataset = bq.dataset(config.bigquery.dataset);
-      const table = dataset.table(config.bigquery.contactTable);
-      let contactOffset = JSON.parse(fs.readFileSync(config.hubspot.lastOffsetLocation)).contact
+      const table = bigqueryLib.getTable(config.bigquery.dataset, config.bigquery.company.tableId);
+      let offset = JSON.parse(fs.readFileSync(config.hubspot.lastOffsetLocation)).company.offset
       console.log("------------------ Got offsets ------------------")
 
-      let contactProperties = await hs.contacts.properties.get()
-      contactProperties = contactProperties.map(prop => prop.name)
-      console.log("------------------ Got properties ------------------")
+      const properties = JSON.parse(fs.readFileSync(config.hubspot.propertiesLocation)).company.properties
 
       let opts = {
-        count: config.hubspot.contactRequest.count,
-        // property: contactProperties
+        count: config.hubspot.requestCount.count
       }
       let keepRunning = true
-      let contacts = [] // Initialisation à vide de data
 
       console.log("------------------ Getting data ------------------")
       while (keepRunning) { // En boucle parce que hubspot limite l'API à 100 contacts par requete
         console.log(":::::::::::::: Next Wave ::::::::::::::::")
-        let nextData = await hs.contacts.getRecentlyCreated(opts) // Le/Les prochain(s) <count> contacts à prendre
+        let nextData = await hs.companies.getRecentlyCreated(opts) // Le/Les prochain(s) <count> contacts à prendre
         keepRunning = nextData['has-more']
-        if (contactOffset.timeOffset && contactOffset.vidOffset && nextData['time-offset'] <= contactOffset.timeOffset && nextData['vid-offset'] <= contactOffset.vidOffset) { // si le addedAt et canonical-vid du dernier contact est inf ou egal à celui dans last.json
-          keepRunning = false // ne plus prendre les prochains vagues de données
-          nextData.contacts = nextData.contacts.filter(contact => contact.addedAt > contactOffset.timeOffset && contact['canonical-vid'] > contactOffset.vidOffset) // Filtre la vague courante de données
-        }
-        contacts.push(...nextData.contacts) // Ajouter les données dans data
-        opts = { ...opts, ...{ vidOffset: nextData['vid-offset'], timeOffset: nextData['time-offset'] } }
-      }
-      console.log(contacts);
 
-      console.log("------------------ Got data ------------------")
-      // Modification de la structure des données pour l'adaptation vers Bigquery
-      bqContacts = contacts.map(function (contact) {
-        return {
-          firstname: getProperty('firstname', contact),
-          lastname: getProperty('lastname', contact),
-        }
-      })
-
-      console.log("----------------- Inserting data into bigquery ----------------")
-      //Insertion des données dans bigquery
-      if (bqContacts.length) {
-        table.insert(bqContacts, (err, apiResponse) => {
-          if (err) {
-            console.log(`Error when inserting data to table. ${err}`)
+        console.log("------------------ Got data ------------------")
+        // Modification de la structure des données pour l'adaptation vers Bigquery
+        const bqContacts = contactsInfos.map(function (contact) {
+          const temp = {}
+          let i = 0
+          for (property_name in properties) {
+            try {
+              const propValue = getProperty(property_name, contact)
+              temp[property_name] = castType(propValue, properties[property_name].type)
+            } catch (err) {
+              throw new Exception(err.message)
+            }
           }
-          else {
-            console.log(`Data inserted`)
-            console.log("-------------------- UPDATING last.json ---------------------")
-            // MISE A JOUR DU FICHIER last.json 
-            contactOffset = { ...contactOffset, ...{ vidOffset: contacts[0]['canonical-vid'], timeOffset: contacts[0].addedAt } }
-            fs.writeFileSync(config.hubspot.lastOffsetLocation, JSON.stringify({ contact: contactOffset }))
-            console.log("--------------------- last.json UPDATED ----------------------")
-          }
-          console.log(apiResponse)
+          return temp
         })
-        console.log("===================== TASK DONE =========================")
-      } else {
-        return 'Nothing to insert';
+
+        console.log("----------------- Inserting data into bigquery ----------------")
+        //Insertion des données dans bigquery
+        console.log(bqContacts.length)
+        if (bqContacts.length) {
+          table.insert(bqContacts, (err, apiResponse) => {
+            if (err) {
+              console.log(`Error when inserting data to table`)
+              console.log(err.response.insertErrors[0].errors)
+            }
+            else {
+              console.log(`Data inserted`)
+              console.log("-------------------- UPDATING last.json ---------------------")
+              // MISE A JOUR DU FICHIER last.json 
+              offset = { ...contactOffset, ...{ vidOffset: contactsInfos[0]['canonical-vid'], timeOffset: contactsInfos[0].addedAt } }
+              fs.writeFileSync(config.hubspot.lastOffsetLocation, JSON.stringify({ contact: contactOffset }))
+              console.log("--------------------- last.json UPDATED ----------------------")
+            }
+          })
+          console.log("===================== TASK DONE =========================")
+        } else {
+          return 'Nothing to insert';
+        }
+        opts = { ...opts, ...{ offset: nextData['offset'] } }
       }
     } catch (err) {
       throw err
     }
   },
-  update: async function () {
+  updateProperties: async function () {
     const hubspotLib = require('./lib/hubspot')
     try {
-      await hubspotLib.updateProperties(hs, 'company', config)
+      await hubspotLib.updateProperties(hs, 'contact', config)
+    } catch (err) {
+      throw err
+    }
+  },
+  createTable: async function (entity) {
+    try {
+      console.log(`Creating table ${entity}`)
+      const bigqueryLib = require('./lib/bigquery')
+      const properties = JSON.parse(fs.readFileSync(config.hubspot.propertiesLocation))[entity].properties
+      const tableConfig = config.bigquery[entity]
+      const metadata = bigqueryLib.generateTableSchema(tableConfig.tableId, tableConfig.description, properties, config.hubspot.fieldEquivalent)
+      console.log(metadata)
+      const res = await bigqueryLib.createTable(config.bigquery.dataset, entity, metadata)
+      console.log(res)
+    } catch (err) {
+      throw err
+    }
+  },
+  updateSchema: async function (entity) {
+    try {
+      console.log(`Updating ${entity}'s schema`)
+      const bigqueryLib = require('./lib/bigquery')
+      const properties = JSON.parse(fs.readFileSync(config.hubspot.propertiesLocation)).contact.properties
+      const tableConfig = config.bigquery[entity]
+      const metadata = bigqueryLib.generateTableSchema(tableConfig.tableId, tableConfig.description, properties, config.hubspot.fieldEquivalent)
+      await bigqueryLib.updateTableSchema(config.bigquery.dataset, entity, metadata)
     } catch (err) {
       throw err
     }

@@ -10,7 +10,8 @@ module.exports = {
     try {
       console.log("================== TASK BEGIN ====================")
       const table = bigqueryLib.getTable(config.bigquery.dataset, config.bigquery.contact.tableId);
-      let contactOffset = JSON.parse(fs.readFileSync(config.hubspot.lastOffsetLocation)).contact
+      let offset = JSON.parse(fs.readFileSync(config.hubspot.lastOffsetLocation))
+      let contactOffset = offset.contact
       console.log("------------------ Got offsets ------------------")
 
       const properties = JSON.parse(fs.readFileSync(config.hubspot.propertiesLocation)).contact.properties
@@ -61,8 +62,8 @@ module.exports = {
               console.log(`Data inserted`)
               console.log("-------------------- UPDATING last.json ---------------------")
               // MISE A JOUR DU FICHIER last.json 
-              contactOffset = { ...contactOffset, ...{ vidOffset: contactsInfos[0]['canonical-vid'], timeOffset: contactsInfos[0].addedAt } }
-              fs.writeFileSync(config.hubspot.lastOffsetLocation, JSON.stringify({ contact: contactOffset }))
+              offset = { ...offset, ...{ contact: { vidOffset: contactsInfos[0]['canonical-vid'], timeOffset: contactsInfos[0].addedAt } } }
+              fs.writeFileSync(config.hubspot.lastOffsetLocation, JSON.stringify(offset))
               console.log("--------------------- last.json UPDATED ----------------------")
             }
           })

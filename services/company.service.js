@@ -10,7 +10,7 @@ module.exports = {
     try {
       console.log("================== TASK BEGIN ====================")
       const table = bigqueryLib.getTable(config.bigquery.dataset, config.bigquery.company.tableId);
-      let offset = JSON.parse(fs.readFileSync(config.hubspot.lastOffsetLocation)).company.offset
+      let offset = JSON.parse(fs.readFileSync(config.hubspot.lastOffsetLocation))
       console.log("------------------ Got offsets ------------------")
 
       const properties = JSON.parse(fs.readFileSync(config.hubspot.propertiesLocation)).company.properties
@@ -21,19 +21,19 @@ module.exports = {
       let keepRunning = true
 
       console.log("------------------ Getting data ------------------")
-      while (keepRunning) { // En boucle parce que hubspot limite l'API à 100 contacts par requete
+      while (keepRunning) { // En boucle parce que hubspot limite l'API à 100 ligne par requete
         console.log(":::::::::::::: Next Wave ::::::::::::::::")
-        let nextData = await hs.companies.getRecentlyCreated(opts) // Le/Les prochain(s) <count> contacts à prendre
-        keepRunning = nextData['has-more']
+        let nextData = await hs.companies.getRecentlyCreated(opts) // Le/Les prochain(s) <count> companies à prendre
+        keepRunning = nextData['hasMore']
 
         console.log("------------------ Got data ------------------")
         // Modification de la structure des données pour l'adaptation vers Bigquery
-        const bqContacts = contactsInfos.map(function (contact) {
+        const bqCompanies = nextData.results.map(function (company) {
           const temp = {}
           let i = 0
           for (property_name in properties) {
             try {
-              const propValue = getProperty(property_name, contact)
+              const propValue = getProperty(property_name, company)
               temp[property_name] = castType(propValue, properties[property_name].type)
             } catch (err) {
               throw new Exception(err.message)
@@ -44,9 +44,9 @@ module.exports = {
 
         console.log("----------------- Inserting data into bigquery ----------------")
         //Insertion des données dans bigquery
-        console.log(bqContacts.length)
-        if (bqContacts.length) {
-          table.insert(bqContacts, (err, apiResponse) => {
+        console.log(bqCompanies.length)
+        if (bqCompanies.length) {
+          table.insert(bqCompanies, (err, apiResponse) => {
             if (err) {
               console.log(`Error when inserting data to table`)
               console.log(err.response.insertErrors[0].errors)
@@ -55,8 +55,8 @@ module.exports = {
               console.log(`Data inserted`)
               console.log("-------------------- UPDATING last.json ---------------------")
               // MISE A JOUR DU FICHIER last.json 
-              offset = { ...contactOffset, ...{ vidOffset: contactsInfos[0]['canonical-vid'], timeOffset: contactsInfos[0].addedAt } }
-              fs.writeFileSync(config.hubspot.lastOffsetLocation, JSON.stringify({ contact: contactOffset }))
+              offset = { ...offset, ...{ company: { timestamp: nextData.results[0].properties.createdate.value } } }
+              fs.writeFileSync(config.hubspot.lastOffsetLocation, JSON.stringify(offset))
               console.log("--------------------- last.json UPDATED ----------------------")
             }
           })
@@ -64,7 +64,7 @@ module.exports = {
         } else {
           return 'Nothing to insert';
         }
-        opts = { ...opts, ...{ offset: nextData['offset'] } }
+        opts = { ...opts, ...{ offset: nextData['offset'] } } // Update request offset
       }
     } catch (err) {
       throw err

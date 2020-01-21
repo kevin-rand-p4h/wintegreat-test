@@ -2,8 +2,8 @@ var router = require('express').Router()
 
 router.post('/migrate', async function (req, res, next) {
   try {
-    const task = require('../../services/company.service')
-    task.run();
+    const task = require('../../services/ticket.service')
+    await task.run();
     res.json({
       message: "Task done successfully!",
       status: "done"
@@ -12,7 +12,7 @@ router.post('/migrate', async function (req, res, next) {
     res.json({
       message: "Got an error on task",
       details: [
-        err
+        err.message
       ],
       status: "error"
     })
@@ -22,10 +22,10 @@ router.post('/migrate', async function (req, res, next) {
 //Update contacts properties
 router.post('/properties/update', async function (req, res, next) {
   try {
-    const service = require('../../services/company.service')
+    const service = require('../../services/ticket.service')
     service.updateProperties()
     res.json({
-      message: "Companies Properties update done successfully!",
+      message: "Tickets Properties update done successfully!",
       status: "done"
     })
   } catch (err) {
@@ -42,10 +42,10 @@ router.post('/properties/update', async function (req, res, next) {
 //Update contacts schema
 router.post('/schema/update', async function (req, res, next) {
   try {
-    const service = require('../../services/company.service')
-    const schema = await service.updateSchema('company')
+    const service = require('../../services/ticket.service')
+    const schema = await service.updateSchema('ticket')
     res.json({
-      message: "Companies Properties update done successfully!",
+      message: "Tickets Schema update done successfully!",
       data: schema,
       status: "done"
     })
@@ -63,10 +63,31 @@ router.post('/schema/update', async function (req, res, next) {
 //Create contact table
 router.post('/create', async function (req, res, next) {
   try {
-    const service = require('../../services/company.service')
-    await service.createTable('company')
+    const service = require('../../services/ticket.service')
+    await service.createTable('ticket')
     res.json({
-      message: "Companies table created successfully!",
+      message: "Tickets table created successfully!",
+      status: "done"
+    })
+  } catch (err) {
+    res.json({
+      message: "Got an error",
+      details: [
+        err.message
+      ],
+      status: "error"
+    })
+  }
+})
+
+//Create contact table
+router.post('/getProperties', async function (req, res, next) {
+  try {
+    const service = require('../../services/ticket.service')
+    const properties = service.getProperties('ticket')
+    res.json({
+      data: properties,
+      message: "Tickets table created successfully!",
       status: "done"
     })
   } catch (err) {

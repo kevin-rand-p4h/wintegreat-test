@@ -39,6 +39,15 @@ module.exports = {
         description: 'Table containing all the active companies',
         schema: {}
       }
+    },
+    ticket: {
+      tableId: 'ticket',
+      description: 'Table containing all the active tickets',
+      schema: {
+        name: 'ticket',
+        description: 'Table containing all the active tickets',
+        schema: {}
+      }
     }
   }
 }

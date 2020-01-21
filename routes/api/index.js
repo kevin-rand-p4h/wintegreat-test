@@ -7,6 +7,7 @@ router.get('/', function (req, res) {
 
 router.use('/contact', require('./contact'));
 router.use('/company', require('./company'));
+router.use('/ticket', require('./ticket'));
 // router.use('/table', require('./table'));
 
 router.post('/dataset/create', async (req, res, next) => {

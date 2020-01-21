@@ -10,34 +10,71 @@ module.exports = {
     try {
       const importDate = new Date().getTime()
       console.log("================== TASK BEGIN ====================")
-      const table = bigqueryLib.getTable(config.bigquery.dataset, config.bigquery.company.tableId);
+      const table = bigqueryLib.getTable(config.bigquery.dataset, config.bigquery.ticket.tableId);
       let offset = JSON.parse(fs.readFileSync(config.hubspot.lastOffsetLocation))
       console.log("------------------ Got offsets ------------------")
 
-      const properties = JSON.parse(fs.readFileSync(config.hubspot.propertiesLocation)).company.properties
-
+      const properties = JSON.parse(fs.readFileSync(config.hubspot.propertiesLocation)).ticket.properties
+      console.log("Got properties")
       let opts = {
         count: config.hubspot.requestCount.count
       }
-      let keepRunning = true
-
-      console.log("------------------ Getting data ------------------")
-      while (keepRunning) { // En boucle parce que hubspot limite l'API à 100 ligne par requete
-        console.log(":::::::::::::: Next Wave ::::::::::::::::")
-        let nextData = await hs.companies.getRecentlyCreated(opts) // Le/Les prochain(s) <count> companies à prendre
-        keepRunning = nextData['hasMore']
-
-        console.log("------------------ Got data ------------------")
+      // Si c'est la première fois qu'on récupère les tickets
+      let data = []
+      if (offset.ticket.timestamp == "") {
+        let keepRunning = true
+        let tempOffset = ""
+        while (keepRunning) {
+          const tempData = await hubspot.getAllTickets(hs, tempOffset)
+          data.push(...tempData.objects)
+          keepRunning = tempData.hasMore
+          tempOffset = tempData.offset
+        }
+        const timestamps = data.map(ticket => ticket.properties.createdate.timestamp)
+        const indexMaxTimestamp = timestamps.indexOf(Math.max(...timestamps))
+        const { timestamp, objectId } = {
+          timestamp: data[indexMaxTimestamp].properties.createdate.timestamp,
+          ...data[indexMaxTimestamp]
+        }
+        offset.ticket = {
+          timestamp: timestamp,
+          changeType: "CREATED",
+          objectId: objectId
+        }
+      } else {
+        let keepRunning = true
+        let tempOffset = offset.ticket
+        while (keepRunning) {
+          const tempData = await hubspot.getTicketsRecentLog(hs, tempOffset)
+          data.push(...tempData.filter(ticket => ticket.changeType == "CREATED"))
+          keepRunning = (tempData === undefined || tempData.length == 0) ? false : true
+          if (keepRunning) {
+            const { timestamp, changeType, objectId } = tempData.slice(-1)[0]
+            tempOffset = { ...{ timestamp, changeType, objectId } }
+          }
+        }
+        offset.ticket = tempOffset
+      }
+      console.log(offset)
+      console.log("Got data")
+      const ids = data.map(ticket => ticket.objectId)
+      console.log(ids)
+      while (ids.length > 0) {
+        console.log(ids)
+        const chunkIds = ids.splice(0, config.hubspot.requestCount.count)
+        const chunk = await hubspot.getTicketsByIds(chunkIds, hs, properties)
         // Modification de la structure des données pour l'adaptation vers Bigquery
-        const bqCompanies = nextData.results.map(function (company) {
+        const bqTickets = Object.keys(chunk).map(function (ticketId) {
+          const ticket = chunk[ticketId]
           const temp = {}
           let i = 0
           for (property_name in properties) {
             try {
               if (property_name == "import_date") {
+                console.log(importDate)
                 temp[property_name] = castType(importDate, properties[property_name].type)
               } else {
-                const propValue = getProperty(property_name, company)
+                const propValue = getProperty(property_name, ticket)
                 temp[property_name] = castType(propValue, properties[property_name].type)
               }
             } catch (err) {
@@ -46,12 +83,11 @@ module.exports = {
           }
           return temp
         })
-
         console.log("----------------- Inserting data into bigquery ----------------")
         //Insertion des données dans bigquery
-        console.log(bqCompanies.length)
-        if (bqCompanies.length) {
-          table.insert(bqCompanies, (err, apiResponse) => {
+        console.log(bqTickets.length)
+        if (bqTickets.length) {
+          table.insert(bqTickets, (err, apiResponse) => {
             console.log(apiResponse)
             if (err) {
               console.log(`Error when inserting data to table`)
@@ -59,18 +95,14 @@ module.exports = {
             }
             else {
               console.log(`Data inserted`)
-              console.log("-------------------- UPDATING last.json ---------------------")
-              // MISE A JOUR DU FICHIER last.json 
-              offset = { ...offset, ...{ company: { timestamp: nextData.results[0].properties.createdate.value } } }
-              fs.writeFileSync(config.hubspot.lastOffsetLocation, JSON.stringify(offset))
-              console.log("--------------------- last.json UPDATED ----------------------")
             }
           })
+          fs.writeFileSync(config.hubspot.lastOffsetLocation, JSON.stringify(offset))
           console.log("===================== TASK DONE =========================")
         } else {
           return 'Nothing to insert';
         }
-        opts = { ...opts, ...{ offset: nextData['offset'] } } // Update request offset
+        // opts = { ...opts, ...{ offset: nextData['offset'] } } // Update request offset
       }
     } catch (err) {
       throw err
@@ -79,7 +111,17 @@ module.exports = {
   updateProperties: async function () {
     const hubspotLib = require('./lib/hubspot')
     try {
-      await hubspotLib.updateProperties(hs, 'company', 'companies', config)
+      await hubspotLib.getObjectProperties(hs, 'ticket', config)
+    } catch (err) {
+      throw new Exception(err.message)
+    }
+  },
+  getProperties: function () {
+    const hubspotLib = require('./lib/hubspot')
+    try {
+      const properties = JSON.parse(fs.readFileSync(config.hubspot.propertiesLocation)).ticket.properties
+      const structured = Object.keys(properties).map(name => `&properties=${name}`).reduce((total, el) => total + el)
+      return structured
     } catch (err) {
       throw err
     }

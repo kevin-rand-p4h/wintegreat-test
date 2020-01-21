@@ -59,7 +59,7 @@
       },
       "activite_pratique_juste_avant_le_programme_tremplin": {
         "label": "Activité pratiqué juste avant le Programme Tremplin",
-        "type": "string"
+        "type": "enumeration"
       },
       "activites_de_creation_de_relation_sociales_debut_de_programme": {
         "label": "Activités de création de relation sociales début de programme",
@@ -266,7 +266,7 @@
         "type": "enumeration"
       },
       "cours_de_soft_skills_les_moins_utiles_m_0": {
-        "label": "Cours de soft skills les moins utiles M+0",
+        "label": "Cours de soft skills les plus utiles M+0",
         "type": "enumeration"
       },
       "cours_de_soft_skills_preferes": {
@@ -350,7 +350,7 @@
         "type": "string"
       },
       "dernier_diplome_obtenu": {
-        "label": "Dernier diplôme obtenu",
+        "label": "Plus haut diplôme obtenu",
         "type": "string"
       },
       "dernier_probl_me_identifi_": {
@@ -486,7 +486,7 @@
         "type": "enumeration"
       },
       "gout_de_s_amuser_debut_de_programme": {
-        "label": "Goût de s\"amuser début de programme",
+        "label": "Goût de s'amuser début de programme",
         "type": "enumeration"
       },
       "graduation_date": {
@@ -1162,7 +1162,7 @@
         "type": "enumeration"
       },
       "satisfaction_des_outils_mis_a_disposition_des_accompagnants": {
-        "label": "Satisfaction des outils mis à disposition des accompagnants",
+        "label": "Satisfaction des outils mis à disposition",
         "type": "enumeration"
       },
       "satisfaction_des_services_offerts_par_l_universite": {
@@ -1218,7 +1218,7 @@
         "type": "string"
       },
       "secteur_familier": {
-        "label": "Secteur familié",
+        "label": "Secteurs familiés",
         "type": "enumeration"
       },
       "secteur_professionnel": {
@@ -1226,7 +1226,7 @@
         "type": "enumeration"
       },
       "semestre": {
-        "label": "Semestre",
+        "label": "Semestres",
         "type": "enumeration"
       },
       "semestre_candidature": {
@@ -1298,7 +1298,7 @@
         "type": "string"
       },
       "suggestion_d_amelioration_des_outils_mis_a_disposition_des_accompagnants": {
-        "label": "Suggestion d'amélioration des outils mis à disposition des accompagnants",
+        "label": "Suggestion d'amélioration des outils mis à disposition",
         "type": "string"
       },
       "suggestion_pour_ameliorer_le_programme": {
@@ -1502,19 +1502,19 @@
         "type": "string"
       },
       "engagements_last_meeting_booked": {
-        "label": "Last Meetings Tool Submission",
+        "label": "Date of last meeting booked in meetings tool",
         "type": "datetime"
       },
       "engagements_last_meeting_booked_campaign": {
-        "label": "Last Meetings Tool Submission Campaign",
+        "label": "Campaign of last booking in meetings tool",
         "type": "string"
       },
       "engagements_last_meeting_booked_medium": {
-        "label": "Last Meetings Tool Submission Medium",
+        "label": "Medium of last booking in meetings tool",
         "type": "string"
       },
       "engagements_last_meeting_booked_source": {
-        "label": "Last Meetings Tool Submission Source",
+        "label": "Source of last booking in meetings tool",
         "type": "string"
       },
       "hs_analytics_first_visit_timestamp": {
@@ -1768,6 +1768,350 @@
       "associatedcompanylastupdated": {
         "label": "Associated Company Last Updated",
         "type": "number"
+      },
+      "accepte_d_etre_contacter_pour_temoigner_m_12": {
+        "label": "Accepte d'être contacter pour témoigner M+12",
+        "type": "enumeration"
+      },
+      "adresse_de_rentree": {
+        "label": "Adresse de rentrée",
+        "type": "string"
+      },
+      "adresse_postale": {
+        "label": "Adresse postale",
+        "type": "string"
+      },
+      "aide_de_wintegreat_sur_la_realisation_du_projet_entrepreneurial_m_12": {
+        "label": "Aide de Wintegreat sur la réalisation du projet entrepreneurial M+12",
+        "type": "number"
+      },
+      "aides_financieres_m_6": {
+        "label": "Aides financières M+6",
+        "type": "enumeration"
+      },
+      "apport_de_competences_professionnelles_par_wintegreat": {
+        "label": "Apport de compétences professionnelles par Wintegreat ",
+        "type": "enumeration"
+      },
+      "autres_aides_financieres_m_6": {
+        "label": "Autres aides financières M+6",
+        "type": "string"
+      },
+      "cause_d_abandon": {
+        "label": "Cause d'abandon",
+        "type": "string"
+      },
+      "certificat": {
+        "label": "Certificat de fin de programme",
+        "type": "string"
+      },
+      "comment_considerez_vous_cet_emploi_par_rapport_a_votre_experience_professionnelle_": {
+        "label": "Considération de l'emploi par rapport au niveau d'expérience professionnelle M+12 ",
+        "type": "enumeration"
+      },
+      "competences_professionnelles_apportees_par_les_programmes": {
+        "label": "Compétences professionnelles apportées par les programmes",
+        "type": "string"
+      },
+      "conseil_success_story": {
+        "label": "Consigne Success Story",
+        "type": "string"
+      },
+      "consideration_de_l_emploi_par_rapport_au_niveau_d_etude_m_12": {
+        "label": "Considération de l'emploi par rapport au niveau d'étude M+12",
+        "type": "enumeration"
+      },
+      "contact_avec_les_autres_parties_prenantes": {
+        "label": "Contact avec les autres parties prenantes",
+        "type": "enumeration"
+      },
+      "correspondance_emploi_au_projet_professionnel_m_12": {
+        "label": "Correspondance emploi au projet professionnel M+12",
+        "type": "enumeration"
+      },
+      "correspondance_formation_au_niveau_d_etudes_m_12": {
+        "label": "Correspondance formation au niveau d'études M+12",
+        "type": "enumeration"
+      },
+      "correspondance_formation_au_niveau_d_etudes_m_6": {
+        "label": "Correspondance formation au niveau d'études M+6",
+        "type": "enumeration"
+      },
+      "correspondance_formation_au_projet_professionnel_m_12": {
+        "label": "Correspondance formation au projet professionnel M+12",
+        "type": "enumeration"
+      },
+      "correspondance_formation_au_projet_professionnel_m_6": {
+        "label": "Correspondance formation au projet professionnel M+6",
+        "type": "enumeration"
+      },
+      "date_de_fin_de_programme": {
+        "label": "date de fin de programme",
+        "type": "date"
+      },
+      "dernier_etablissement_wintegreat_m_12": {
+        "label": "Dernier établissement Wintegreat M+12",
+        "type": "enumeration"
+      },
+      "dernier_semestre_wintegreat_m_12": {
+        "label": "Dernier semestre Wintegreat M+12",
+        "type": "enumeration"
+      },
+      "documents_administratifs": {
+        "label": "Documents administratifs",
+        "type": "string"
+      },
+      "domaine_projet_entrepreneurial_m_12": {
+        "label": "Domaine projet entrepreneurial M+12",
+        "type": "enumeration"
+      },
+      "domaines_d_etudes_m_12": {
+        "label": "Domaines d'études M+12",
+        "type": "enumeration"
+      },
+      "domaines_d_etudes_m_6": {
+        "label": "Domaines d'études M+6",
+        "type": "enumeration"
+      },
+      "ecole_ou_universite_etudes_m_12": {
+        "label": "Ecole ou Université études M+12",
+        "type": "string"
+      },
+      "ecole_ou_universite_m_6": {
+        "label": "Ecole ou Université M+6",
+        "type": "string"
+      },
+      "emploi_trouve_avec_l_aide_de_wintegreat_m_12": {
+        "label": "Emploi trouvé avec l'aide de Wintegreat M+12",
+        "type": "number"
+      },
+      "etat_du_projet_professionnel_avant_programme": {
+        "label": "Etat du projet professionnel avant programme",
+        "type": "enumeration"
+      },
+      "fonction_partenaire": {
+        "label": "Fonction partenaire",
+        "type": "string"
+      },
+      "formation_trouvee_avec_l_aide_de_wintegreat_m_12": {
+        "label": "Formation trouvée avec l'aide de Wintegreat M+12",
+        "type": "number"
+      },
+      "formation_trouvee_avec_l_aide_de_wintegreat_m_6": {
+        "label": "Formation trouvée avec l'aide de Wintegreat M+6",
+        "type": "number"
+      },
+      "heure_de_rentree": {
+        "label": "Heure de rentrée",
+        "type": "string"
+      },
+      "insertion_professionnelle_facilitee_par_wintegreat": {
+        "label": "Insertion professionnelle facilitée par Wintegreat",
+        "type": "enumeration"
+      },
+      "interesse_par_un_format_de_podcast": {
+        "label": "Intéressé par un format de podcast  ",
+        "type": "enumeration"
+      },
+      "interesse_pour_rejoindre_communaute_mentor": {
+        "label": "Intéressé pour rejoindre communauté mentor ",
+        "type": "enumeration"
+      },
+      "le_francais_est_bloquant_dans_la_discussion": {
+        "label": "Le français est bloquant dans la discussion",
+        "type": "enumeration"
+      },
+      "message_partenaire": {
+        "label": "Message partenaire",
+        "type": "string"
+      },
+      "niveau_de_fle_enseigne": {
+        "label": "Niveau de FLE enseigné",
+        "type": "enumeration"
+      },
+      "niveau_et_type_de_formation_m_12": {
+        "label": "Niveau et type de formation M+12",
+        "type": "enumeration"
+      },
+      "niveau_et_type_de_formation_m_6": {
+        "label": "Niveau et type de formation M+6",
+        "type": "enumeration"
+      },
+      "nom_de_l_entreprise_m_12": {
+        "label": "Nom de l'entreprise M+12",
+        "type": "string"
+      },
+      "nombre_d_absences_non_justifiees": {
+        "label": "Nombre d'absences non justifiées",
+        "type": "number"
+      },
+      "nombre_de_retards": {
+        "label": "Nombre de retards",
+        "type": "number"
+      },
+      "nombre_de_salaries_projet_entrepreneurial_m_12": {
+        "label": "Nombre de salariés projet entrepreneurial M+12",
+        "type": "number"
+      },
+      "nombre_de_semaine_programme_avant_abandon": {
+        "label": "Nombre de semaine programme avant abandon",
+        "type": "number"
+      },
+      "nombres_d_absences_justifiees": {
+        "label": "Nombres d'absences justifiées",
+        "type": "number"
+      },
+      "participation_renforcement_en_ligne_mentor": {
+        "label": "Participation renforcement en ligne Mentor",
+        "type": "enumeration"
+      },
+      "plat_prefere_du_pays_d_origine": {
+        "label": "Plat préféré du pays d'origine ",
+        "type": "enumeration"
+      },
+      "potentiel_success_story": {
+        "label": "Potentiel Success Story",
+        "type": "number"
+      },
+      "precision_aide_de_wintegreat_pour_la_recherche_d_emploi_m_12": {
+        "label": "Précision Aide de Wintegreat pour la recherche d'emploi M+12",
+        "type": "string"
+      },
+      "precision_aide_de_wintegreat_sur_la_realisation_du_projet_entrepreneurial_m_12": {
+        "label": "Précision aide de Wintegreat sur la réalisation du projet entrepreneurial M+12",
+        "type": "string"
+      },
+      "precision_aide_du_reseau_wintegreat_pour_trouver_la_formation_m_12": {
+        "label": "Précision aide du réseau Wintegreat pour trouver la formation M+12",
+        "type": "string"
+      },
+      "precision_correspondance_emploi_au_projet_professionnel_m_12": {
+        "label": "Précision correspondance emploi au projet professionnel M+12",
+        "type": "string"
+      },
+      "precision_engagement_partenaire": {
+        "label": "Précision engagement partenaire",
+        "type": "string"
+      },
+      "precisions_contribution_wintegreat_au_projet_professionnel": {
+        "label": "Précisions contribution Wintegreat au projet professionnel",
+        "type": "string"
+      },
+      "precisions_des_difficultes_rencontrees_avec_l_administration": {
+        "label": "Précisions des difficultés rencontrées avec l'administration",
+        "type": "string"
+      },
+      "precisions_etudes_actuelles_m_12": {
+        "label": "Précisions Etudes actuelles M+12",
+        "type": "string"
+      },
+      "precisions_etudes_actuelles_m_6": {
+        "label": "Précisions Etudes actuelles M+6",
+        "type": "string"
+      },
+      "precisions_insertion_professionnelle_aidee_par_wintegreat": {
+        "label": "Précisions insertion professionnelle aidée par Wintegreat",
+        "type": "string"
+      },
+      "precisions_qualite_des_cours_de_fle": {
+        "label": "Précisions qualité des cours de FLE",
+        "type": "string"
+      },
+      "precisions_satisfaction_profs_de_fle": {
+        "label": "Précisions satisfaction profs de FLE",
+        "type": "string"
+      },
+      "precisions_travail_et_missions_m_12": {
+        "label": "Précisions travail et missions M+12",
+        "type": "string"
+      },
+      "rencontre_de_difficultes_avec_l_administration": {
+        "label": "Rencontre de difficultés avec l'administration",
+        "type": "enumeration"
+      },
+      "renforcement_en_ligne": {
+        "label": "Renforcement en ligne ",
+        "type": "enumeration"
+      },
+      "reponse_impact_m_12": {
+        "label": "Réponse impact M+12",
+        "type": "enumeration"
+      },
+      "reponse_questionnaire_de_satisfaction": {
+        "label": "Réponse questionnaire de satisfaction",
+        "type": "enumeration"
+      },
+      "retours_renforcement_en_ligne": {
+        "label": "Retours renforcement en ligne ",
+        "type": "string"
+      },
+      "role_ep": {
+        "label": "Rôle EP",
+        "type": "enumeration"
+      },
+      "satisfaction_de_ses_realisation_debut_de_programme": {
+        "label": "Satisfaction de ses réalisation début de programme",
+        "type": "enumeration"
+      },
+      "satisfaction_generale_des_profs_de_fle": {
+        "label": "Satisfaction générale des profs de FLE",
+        "type": "enumeration"
+      },
+      "satisfaction_role_programme": {
+        "label": "Satisfaction rôle programme",
+        "type": "enumeration"
+      },
+      "secteur_professionnel_emploi_m_12": {
+        "label": "Secteur professionnel Emploi M+12",
+        "type": "enumeration"
+      },
+      "situation_de_sortie_m_12": {
+        "label": "Situation de sortie M+12",
+        "type": "enumeration"
+      },
+      "situation_de_sortie_m_6": {
+        "label": "Situation de sortie M+6",
+        "type": "enumeration"
+      },
+      "soutien_de_l_equipe_coordinatrice": {
+        "label": "Soutien de l'équipe coordinatrice",
+        "type": "enumeration"
+      },
+      "stade_du_projet_entreprenarial_m_12": {
+        "label": "Stade du projet entreprenarial M+12",
+        "type": "enumeration"
+      },
+      "stade_projet_entrepreneuriat_m_12": {
+        "label": "Stade projet entrepreneuriat M+12",
+        "type": "enumeration"
+      },
+      "temoignages_reussites_et_accomplissements_m_12": {
+        "label": "Témoignages réussites et accomplissements M+12",
+        "type": "string"
+      },
+      "type_de_contrat_professionnel_m_12": {
+        "label": "Type de contrat professionnel M+12",
+        "type": "enumeration"
+      },
+      "type_de_logement_actuel_m_6": {
+        "label": "Type de logement actuel M+6",
+        "type": "enumeration"
+      },
+      "type_de_projet_entreprenarial_m_12": {
+        "label": "Type de projet entreprenarial M+12",
+        "type": "enumeration"
+      },
+      "type_de_structure_partenaire": {
+        "label": "Type de structure partenaire",
+        "type": "enumeration"
+      },
+      "type_engagement_propose_par_la_structure": {
+        "label": "Type engagement proposé par la structure",
+        "type": "enumeration"
+      },
+      "import_date": {
+        "label": "Date de l'importation vers BigQuery",
+        "type": "datetime"
       }
     },
     "exclude": []
@@ -2055,19 +2399,19 @@
         "type": "string"
       },
       "engagements_last_meeting_booked": {
-        "label": "Last Meetings Tool Submission",
+        "label": "Date of last meeting booked in meetings tool",
         "type": "datetime"
       },
       "engagements_last_meeting_booked_campaign": {
-        "label": "Last Meetings Tool Submission Campaign",
+        "label": "Campaign of last booking in meetings tool",
         "type": "string"
       },
       "engagements_last_meeting_booked_medium": {
-        "label": "Last Meetings Tool Submission Medium",
+        "label": "Medium of last booking in meetings tool",
         "type": "string"
       },
       "engagements_last_meeting_booked_source": {
-        "label": "Last Meetings Tool Submission Source",
+        "label": "Source of last booking in meetings tool",
         "type": "string"
       },
       "hs_sales_email_last_replied": {
@@ -2189,6 +2533,327 @@
       "web_technologies": {
         "label": "Web Technologies",
         "type": "enumeration"
+      },
+      "import_date": {
+        "label": "Date de l'importation vers BigQuery",
+        "type": "datetime"
+      }
+    },
+    "exclude": []
+  },
+  "ticket": {
+    "properties": {
+      "closed_date": {
+        "label": "Close date",
+        "type": "datetime"
+      },
+      "created_by": {
+        "label": "Created by",
+        "type": "number"
+      },
+      "createdate": {
+        "label": "Create date",
+        "type": "datetime"
+      },
+      "first_agent_reply_date": {
+        "label": "First agent email response date",
+        "type": "datetime"
+      },
+      "hs_conversations_originating_thread_id": {
+        "label": "Conversations originating thread id",
+        "type": "number"
+      },
+      "hs_created_by_user_id": {
+        "label": "Created by user ID",
+        "type": "number"
+      },
+      "hs_createdate": {
+        "label": "Hubspot create date",
+        "type": "datetime"
+      },
+      "hs_custom_inbox": {
+        "label": "Custom inbox ID",
+        "type": "number"
+      },
+      "hs_date_entered_1080504": {
+        "label": "Date entered 'Problèmes résolus (Support Pipeline)'",
+        "type": "datetime"
+      },
+      "hs_date_entered_1145846": {
+        "label": "Date entered 'New (Tickets Partenariats)'",
+        "type": "datetime"
+      },
+      "hs_date_entered_1145847": {
+        "label": "Date entered 'Waiting on contact (Tickets Partenariats)'",
+        "type": "datetime"
+      },
+      "hs_date_entered_1145848": {
+        "label": "Date entered 'Waiting on us (Tickets Partenariats)'",
+        "type": "datetime"
+      },
+      "hs_date_entered_2": {
+        "label": "Date entered 'Waiting on contact (Support Pipeline)'",
+        "type": "datetime"
+      },
+      "hs_date_entered_3": {
+        "label": "Date entered 'Waiting on us (Support Pipeline)'",
+        "type": "datetime"
+      },
+      "hs_date_entered_4": {
+        "label": "Date entered 'Closed (Support Pipeline)'",
+        "type": "datetime"
+      },
+      "hs_date_exited_1080504": {
+        "label": "Date exited 'Problèmes résolus (Support Pipeline)'",
+        "type": "datetime"
+      },
+      "hs_date_exited_1145846": {
+        "label": "Date exited 'New (Tickets Partenariats)'",
+        "type": "datetime"
+      },
+      "hs_date_exited_1145847": {
+        "label": "Date exited 'Waiting on contact (Tickets Partenariats)'",
+        "type": "datetime"
+      },
+      "hs_date_exited_1145848": {
+        "label": "Date exited 'Waiting on us (Tickets Partenariats)'",
+        "type": "datetime"
+      },
+      "hs_date_exited_2": {
+        "label": "Date exited 'Waiting on contact (Support Pipeline)'",
+        "type": "datetime"
+      },
+      "hs_date_exited_3": {
+        "label": "Date exited 'Waiting on us (Support Pipeline)'",
+        "type": "datetime"
+      },
+      "hs_date_exited_4": {
+        "label": "Date exited 'Closed (Support Pipeline)'",
+        "type": "datetime"
+      },
+      "hs_external_object_ids": {
+        "label": "External object ids",
+        "type": "enumeration"
+      },
+      "hs_feedback_last_ces_follow_up": {
+        "label": "Last CES survey comment",
+        "type": "string"
+      },
+      "hs_feedback_last_ces_rating": {
+        "label": "Last CES survey rating",
+        "type": "enumeration"
+      },
+      "hs_feedback_last_survey_date": {
+        "label": "Last CES survey date",
+        "type": "datetime"
+      },
+      "hs_file_upload": {
+        "label": "File upload",
+        "type": "string"
+      },
+      "hs_last_email_activity": {
+        "label": "Last email activity",
+        "type": "enumeration"
+      },
+      "hs_last_email_date": {
+        "label": "Last email date",
+        "type": "datetime"
+      },
+      "hs_lastactivitydate": {
+        "label": "Last activity date",
+        "type": "datetime"
+      },
+      "hs_lastcontacted": {
+        "label": "Last contacted date",
+        "type": "datetime"
+      },
+      "hs_lastmodifieddate": {
+        "label": "Last modified date",
+        "type": "datetime"
+      },
+      "hs_merged_object_ids": {
+        "label": "Merged ticket ids",
+        "type": "enumeration"
+      },
+      "hs_nextactivitydate": {
+        "label": "Next activity date",
+        "type": "datetime"
+      },
+      "hs_num_associated_companies": {
+        "label": "Number of companies",
+        "type": "number"
+      },
+      "hs_num_times_contacted": {
+        "label": "Number of times contacted",
+        "type": "number"
+      },
+      "hs_object_id": {
+        "label": "Object ID",
+        "type": "number"
+      },
+      "hs_originating_email_engagement_id": {
+        "label": "Originating email engagement id",
+        "type": "number"
+      },
+      "hs_pipeline": {
+        "label": "Pipeline",
+        "type": "enumeration"
+      },
+      "hs_pipeline_stage": {
+        "label": "Ticket status",
+        "type": "enumeration"
+      },
+      "hs_resolution": {
+        "label": "Resolution",
+        "type": "enumeration"
+      },
+      "hs_ticket_category": {
+        "label": "Category",
+        "type": "enumeration"
+      },
+      "hs_ticket_id": {
+        "label": "Ticket ID",
+        "type": "number"
+      },
+      "hs_ticket_priority": {
+        "label": "Priority",
+        "type": "enumeration"
+      },
+      "hs_time_in_1080504": {
+        "label": "Time in 'Problèmes résolus (Support Pipeline)'",
+        "type": "number"
+      },
+      "hs_time_in_1145846": {
+        "label": "Time in 'New (Tickets Partenariats)'",
+        "type": "number"
+      },
+      "hs_time_in_1145847": {
+        "label": "Time in 'Waiting on contact (Tickets Partenariats)'",
+        "type": "number"
+      },
+      "hs_time_in_1145848": {
+        "label": "Time in 'Waiting on us (Tickets Partenariats)'",
+        "type": "number"
+      },
+      "hs_time_in_2": {
+        "label": "Time in 'Waiting on contact (Support Pipeline)'",
+        "type": "number"
+      },
+      "hs_time_in_3": {
+        "label": "Time in 'Waiting on us (Support Pipeline)'",
+        "type": "number"
+      },
+      "hs_time_in_4": {
+        "label": "Time in 'Closed (Support Pipeline)'",
+        "type": "number"
+      },
+      "hs_updated_by_user_id": {
+        "label": "Updated by user ID",
+        "type": "number"
+      },
+      "hubspot_owner_assigneddate": {
+        "label": "Owner assigned date",
+        "type": "datetime"
+      },
+      "last_engagement_date": {
+        "label": "Date of last engagement",
+        "type": "datetime"
+      },
+      "last_reply_date": {
+        "label": "Last customer reply date",
+        "type": "datetime"
+      },
+      "nps_follow_up_answer": {
+        "label": "NPS follow up",
+        "type": "string"
+      },
+      "nps_follow_up_question_version": {
+        "label": "NPS follow up question",
+        "type": "number"
+      },
+      "nps_score": {
+        "label": "Conversation NPS score",
+        "type": "enumeration"
+      },
+      "source_thread_id": {
+        "label": "Reference to email thread",
+        "type": "string"
+      },
+      "time_to_close": {
+        "label": "Time to close",
+        "type": "number"
+      },
+      "time_to_first_agent_reply": {
+        "label": "Time to first agent email reply",
+        "type": "number"
+      },
+      "subject": {
+        "label": "Ticket name",
+        "type": "string"
+      },
+      "content": {
+        "label": "Ticket description",
+        "type": "string"
+      },
+      "source_type": {
+        "label": "Source",
+        "type": "enumeration"
+      },
+      "source_ref": {
+        "label": "Reference to source-specific object",
+        "type": "string"
+      },
+      "tags": {
+        "label": "Tags",
+        "type": "enumeration"
+      },
+      "hs_sales_email_last_replied": {
+        "label": "Recent Sales Email Replied Date",
+        "type": "datetime"
+      },
+      "hubspot_owner_id": {
+        "label": "Ticket owner",
+        "type": "enumeration"
+      },
+      "notes_last_contacted": {
+        "label": "Last Contacted (Ticket Note)",
+        "type": "datetime"
+      },
+      "notes_last_updated": {
+        "label": "Last Activity Date (Ticket Note)",
+        "type": "datetime"
+      },
+      "notes_next_activity_date": {
+        "label": "Next Activity Date (Ticket Note)",
+        "type": "datetime"
+      },
+      "num_contacted_notes": {
+        "label": "Number of times contacted (Ticket Note)",
+        "type": "number"
+      },
+      "num_notes": {
+        "label": "Number of Sales Activities",
+        "type": "number"
+      },
+      "hubspot_team_id": {
+        "label": "HubSpot team",
+        "type": "enumeration"
+      },
+      "hs_all_owner_ids": {
+        "label": "All owner ids",
+        "type": "enumeration"
+      },
+      "hs_all_team_ids": {
+        "label": "All team ids",
+        "type": "enumeration"
+      },
+      "hs_all_accessible_team_ids": {
+        "label": "All accessible team ids",
+        "type": "enumeration"
+      },
+      "import_date": {
+        "label": "Date de l'importation vers BigQuery",
+        "type": "datetime"
       }
     },
     "exclude": []

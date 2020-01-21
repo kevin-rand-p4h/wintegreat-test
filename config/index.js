@@ -2,7 +2,7 @@ const fs = require('fs')
 
 module.exports = {
   hubspot: {
-    contactRequest: {
+    requestCount: {
       count: 100 // Nombre de contact à prendre par requete
     },
     apiKey: '0beb5763-527f-4d1c-bd1e-7886bf87b9c4',
@@ -28,7 +28,7 @@ module.exports = {
       schema: {
         name: 'contact',
         description: 'Table containing all the active contacts',
-        schema: ''
+        schema: {}
       }
     },
     company: {
@@ -37,7 +37,16 @@ module.exports = {
       schema: {
         name: 'company',
         description: 'Table containing all the active companies',
-        schema: ''
+        schema: {}
+      }
+    },
+    ticket: {
+      tableId: 'ticket',
+      description: 'Table containing all the active tickets',
+      schema: {
+        name: 'ticket',
+        description: 'Table containing all the active tickets',
+        schema: {}
       }
     }
   }

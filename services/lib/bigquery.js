@@ -62,10 +62,11 @@ module.exports = {
   },
   createTable: async function (datasetName, name, metadata = {}) {
     try {
+      console.log("tonga eto")
       const bqClient = getClient()
       const dataset = bqClient.dataset(datasetName)
-      const table = await dataset.createTable(name, metadata)
-      return table
+      console.log(dataset)
+      return dataset.createTable(name, metadata)
     } catch (err) {
       throw err
     }
@@ -75,8 +76,7 @@ module.exports = {
       const bqClient = getClient()
       const dataset = bqClient.dataset(datasetName)
       const table = dataset.table(tableName)
-      const metadata = await table.setMetadata(metadata)
-      return metadata
+      return await table.setMetadata(metadata)
     } catch (err) {
       throw err
     }

@@ -12,7 +12,7 @@ router.post('/migrate', async function (req, res, next) {
     res.json({
       message: "Got an error on task",
       details: [
-        err
+        err.toString()
       ],
       status: "error"
     })
@@ -22,8 +22,8 @@ router.post('/migrate', async function (req, res, next) {
 //Update contacts properties
 router.post('/properties/update', async function (req, res, next) {
   try {
-    const contactService = require('../../services/contact.service')
-    contactService.updateProperties()
+    const service = require('../../services/contact.service')
+    service.updateProperties()
     res.json({
       message: "Contacts Properties update done successfully!",
       status: "done"
@@ -42,8 +42,8 @@ router.post('/properties/update', async function (req, res, next) {
 //Update contacts schema
 router.post('/schema/update', async function (req, res, next) {
   try {
-    const contactService = require('../../services/contact.service')
-    const schema = await contactService.updateSchema('contact')
+    const service = require('../../services/contact.service')
+    const schema = await service.updateSchema('contact')
     res.json({
       message: "Contacts Properties update done successfully!",
       data: schema,
@@ -63,8 +63,8 @@ router.post('/schema/update', async function (req, res, next) {
 //Create contact table
 router.post('/create', async function (req, res, next) {
   try {
-    const contactService = require('../../services/contact.service')
-    await contactService.createTable('contact')
+    const service = require('../../services/contact.service')
+    await service.createTable('contact')
     res.json({
       message: "Contacts table created successfully!",
       status: "done"

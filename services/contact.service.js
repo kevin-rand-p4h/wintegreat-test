@@ -8,15 +8,17 @@ const { getProperty, castType } = require('./lib/utils')
 module.exports = {
   run: async function () {
     try {
+      const importDate = new Date().getTime()
       console.log("================== TASK BEGIN ====================")
       const table = bigqueryLib.getTable(config.bigquery.dataset, config.bigquery.contact.tableId);
-      let contactOffset = JSON.parse(fs.readFileSync(config.hubspot.lastOffsetLocation)).contact
+      let offset = JSON.parse(fs.readFileSync(config.hubspot.lastOffsetLocation))
+      let contactOffset = offset.contact
       console.log("------------------ Got offsets ------------------")
 
       const properties = JSON.parse(fs.readFileSync(config.hubspot.propertiesLocation)).contact.properties
 
       let opts = {
-        count: config.hubspot.contactRequest.count
+        count: config.hubspot.requestCount.count
       }
       let keepRunning = true
 
@@ -35,17 +37,21 @@ module.exports = {
         console.log("------------------ Got data ------------------")
         // Modification de la structure des données pour l'adaptation vers Bigquery
         const bqContacts = contactsInfos.map(function (contact) {
-          const temp = {}
-          let i = 0
-          for (property_name in properties) {
-            try {
-              const propValue = getProperty(property_name, contact)
-              temp[property_name] = castType(propValue, properties[property_name].type)
-            } catch (err) {
-              throw new Exception(err.message)
+          try {
+            const temp = {}
+            let i = 0
+            for (property_name in properties) {
+              if (property_name == "import_date") {
+                temp[property_name] = castType(importDate, properties[property_name].type)
+              } else {
+                const propValue = getProperty(property_name, contact)
+                temp[property_name] = castType(propValue, properties[property_name].type)
+              }
             }
+            return temp
+          } catch (err) {
+            throw err
           }
-          return temp
         })
 
         console.log("----------------- Inserting data into bigquery ----------------")
@@ -61,8 +67,8 @@ module.exports = {
               console.log(`Data inserted`)
               console.log("-------------------- UPDATING last.json ---------------------")
               // MISE A JOUR DU FICHIER last.json 
-              contactOffset = { ...contactOffset, ...{ vidOffset: contactsInfos[0]['canonical-vid'], timeOffset: contactsInfos[0].addedAt } }
-              fs.writeFileSync(config.hubspot.lastOffsetLocation, JSON.stringify({ contact: contactOffset }))
+              offset = { ...offset, ...{ contact: { vidOffset: contactsInfos[0]['canonical-vid'], timeOffset: contactsInfos[0].addedAt } } }
+              fs.writeFileSync(config.hubspot.lastOffsetLocation, JSON.stringify(offset))
               console.log("--------------------- last.json UPDATED ----------------------")
             }
           })
@@ -79,7 +85,7 @@ module.exports = {
   updateProperties: async function () {
     const hubspotLib = require('./lib/hubspot')
     try {
-      await hubspotLib.updateProperties(hs, 'contact', config)
+      await hubspotLib.updateProperties(hs, 'contact', 'contacts', config)
     } catch (err) {
       throw err
     }
@@ -102,7 +108,7 @@ module.exports = {
     try {
       console.log(`Updating ${entity}'s schema`)
       const bigqueryLib = require('./lib/bigquery')
-      const properties = JSON.parse(fs.readFileSync(config.hubspot.propertiesLocation)).contact.properties
+      const properties = JSON.parse(fs.readFileSync(config.hubspot.propertiesLocation))[entity].properties
       const tableConfig = config.bigquery[entity]
       const metadata = bigqueryLib.generateTableSchema(tableConfig.tableId, tableConfig.description, properties, config.hubspot.fieldEquivalent)
       await bigqueryLib.updateTableSchema(config.bigquery.dataset, entity, metadata)

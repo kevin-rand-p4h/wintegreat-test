@@ -80,4 +80,44 @@ router.post('/create', async function (req, res, next) {
   }
 })
 
+//Create anonymous contact table
+router.post('/anonymous/create', async function (req, res, next) {
+  try {
+    const service = require('../../services/contact.service')
+    await service.createTable('anonymous_contact', 'anonymousDataset')
+    res.json({
+      message: "Anonymous Contacts table created successfully!",
+      status: "done"
+    })
+  } catch (err) {
+    res.json({
+      message: "Got an error",
+      details: [
+        err.message
+      ],
+      status: "error"
+    })
+  }
+})
+
+//Migrate anonymous contact table
+router.post('/anonymous/migrate', async function (req, res, next) {
+  try {
+    const service = require('../../services/contact.service')
+    await service.migrateAnonymousData('anonymous_contact', 'anonymousDataset')
+    res.json({
+      message: "Anonymous Contacts table migrated successfully!",
+      status: "done"
+    })
+  } catch (err) {
+    res.json({
+      message: "Got an error",
+      details: [
+        err.message
+      ],
+      status: "error"
+    })
+  }
+})
+
 module.exports = router;

@@ -90,16 +90,16 @@ module.exports = {
       throw err
     }
   },
-  createTable: async function (entity) {
+  createTable: async function (entity, dataset = '') {
     try {
       console.log(`Creating table ${entity}`)
       const bigqueryLib = require('./lib/bigquery')
-      const properties = JSON.parse(fs.readFileSync(config.hubspot.propertiesLocation))[entity].properties
+      const properties = JSON.parse(fs.readFileSync(config.hubspot.propertiesLocation))[entity.split('_').pop()].properties
       const tableConfig = config.bigquery[entity]
+      const excludedFields = JSON.parse(fs.readFileSync(config.hubspot.anonymous))[entity.split('_').pop()].exclusions
       const metadata = bigqueryLib.generateTableSchema(tableConfig.tableId, tableConfig.description, properties, config.hubspot.fieldEquivalent)
-      console.log(metadata)
-      const res = await bigqueryLib.createTable(config.bigquery.dataset, entity, metadata)
-      console.log(res)
+      const res = await bigqueryLib.createTable(dataset || config.bigquery.dataset, entity, metadata)
+      // console.log(res)
     } catch (err) {
       throw err
     }
@@ -112,6 +112,90 @@ module.exports = {
       const tableConfig = config.bigquery[entity]
       const metadata = bigqueryLib.generateTableSchema(tableConfig.tableId, tableConfig.description, properties, config.hubspot.fieldEquivalent)
       await bigqueryLib.updateTableSchema(config.bigquery.dataset, entity, metadata)
+    } catch (err) {
+      throw err
+    }
+  },
+  migrateAnonymousData: async function (entity) {
+    try {
+      const start = process.hrtime()
+      console.log(`Migrating ${entity}'s data to anonymous dataset`)
+      const bigqueryLib = require('./lib/bigquery')
+      const excludedFields = JSON.parse(fs.readFileSync(config.hubspot.anonymous))[entity.split('_').pop()].exclusions
+      const anonymousTable = bigqueryLib.getTable(config.bigquery.anonymousDataset, config.bigquery[entity].tableId);
+      const table = bigqueryLib.getTable(config.bigquery.dataset, config.bigquery[entity.split('_').pop()].tableId);
+      // const metadata = {
+      //   createDisposition: 'CREATE_NEVER',
+      //   writeDisposition: 'WRITE_APPEND',
+      //   schemaUpdateOptions: 'ALLOW_FIELD_RELAXATION'
+      // };
+
+      function manualPaginationCallback(err, rows, nextQuery, apiResponse) {
+        // const restructuredRows = rows.map(row => {
+        //   for (field in excludedFields) {
+        //     delete row[field]
+        //   }
+        //   for (prop of Object.keys(row)) {
+        //     if (row[prop] == null) {
+        //       delete row[prop]
+        //     }
+        //   }
+        //   return row
+        // })
+        anonymousTable.insert(rows, (err, apiResponse) => {
+          console.log(apiResponse)
+          if (err) {
+            console.log(err.toString())
+            if (err.name === 'PartialFailureError') {
+              console.log(err.errors[0].errors[0])
+            }
+          }
+        })
+        if (nextQuery) {
+          setTimeout(() => {
+            console.log("=========== NEXT WAVE ============")
+            table.getRows(nextQuery, manualPaginationCallback)
+          }, 1000)
+
+        }
+      }
+
+      table.getRows({
+        autoPaginate: false,
+        maxResults: 1000
+      }, manualPaginationCallback);
+
+
+      // let [data] = await table.getRows()
+      // const mid = process.hrtime(start)
+      // console.log("restructuring rows")
+      // data = data.map(row => {
+      //   for (field in excludedFields) {
+      //     delete row[field]
+      //   }
+      //   for (prop of Object.keys(row)) {
+      //     if (row[prop] == null) {
+      //       delete row[prop]
+      //     }
+      //   }
+      //   return row
+      // })
+      // const end = process.hrtime(start)
+      // console.log(`mid: ${mid[1] / 1000000}ms`)
+      // console.log(`end: ${end[1] / 1000000}ms`)
+      // console.log(`rows restructured: ${data.length}`)
+      // while (data.length > 0) {
+      //   let insert = process.hrtime(start)
+      //   setTimeout(() => {
+      //     anonymousTable.insert(data.splice(0, 500), (err, apiResponse) => {
+      //       if (err) {
+      //         console.log(err.response.insertErrors[0])
+      //       }
+      //     })
+      //     console.log(`insert: ${insert[1] / 1000000}ms`)
+      //   }, 500)
+      // }
+      // console.log("Anonymisation contact fait!")
     } catch (err) {
       throw err
     }

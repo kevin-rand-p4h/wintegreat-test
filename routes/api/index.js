@@ -12,11 +12,16 @@ router.use('/ticket', require('./ticket'));
 
 router.post('/dataset/create', async (req, res, next) => {
   try {
+    const datasetName = req.query['name']
     const bigqueryLib = require('../../services/lib/bigquery')
     const config = require('../../config/index')
     console.log("Creating dataset")
-    await bigqueryLib.createDataset(config.bigquery.dataset)
+    await bigqueryLib.createDataset(datasetName || config.bigquery.dataset)
     console.log("Dataset created successfully")
+    res.json({
+      message: "Dataset created",
+      status: true
+    })
   } catch (err) {
     next(err)
   }

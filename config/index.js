@@ -8,6 +8,7 @@ module.exports = {
     apiKey: '0beb5763-527f-4d1c-bd1e-7886bf87b9c4',
     lastOffsetLocation: 'config/last.json',
     propertiesLocation: 'config/properties.json',
+    anonymous: 'config/anonymisation.json',
     fieldEquivalent: {
       enumeration: 'string',
       string: 'string',
@@ -22,12 +23,22 @@ module.exports = {
     projectId: 'test-wintegreat',
     keyFileName: 'test-wintegreat-7ac9fc70c1e0.json',
     dataset: "BDD_test",
+    anonymousDataset: "anonymousDataset",
     contact: {
       tableId: 'contact',
       description: 'Table containing all the active contacts',
       schema: {
         name: 'contact',
         description: 'Table containing all the active contacts',
+        schema: {}
+      }
+    },
+    anonymous_contact: {
+      tableId: 'anonymous_contact',
+      description: 'Table containing all the anonymous contacts',
+      schema: {
+        name: 'contact',
+        description: 'Table containing all the anonymous contacts',
         schema: {}
       }
     },

@@ -118,84 +118,51 @@ module.exports = {
   },
   migrateAnonymousData: async function (entity) {
     try {
+      const faker = require('faker/locale/fr')
+      const parse = require('csv-parse')
       const start = process.hrtime()
       console.log(`Migrating ${entity}'s data to anonymous dataset`)
       const bigqueryLib = require('./lib/bigquery')
-      const excludedFields = JSON.parse(fs.readFileSync(config.hubspot.anonymous))[entity.split('_').pop()].exclusions
+      let excludedFields = {}
       const anonymousTable = bigqueryLib.getTable(config.bigquery.anonymousDataset, config.bigquery[entity].tableId);
       const table = bigqueryLib.getTable(config.bigquery.dataset, config.bigquery[entity.split('_').pop()].tableId);
-      // const metadata = {
-      //   createDisposition: 'CREATE_NEVER',
-      //   writeDisposition: 'WRITE_APPEND',
-      //   schemaUpdateOptions: 'ALLOW_FIELD_RELAXATION'
-      // };
-
-      function manualPaginationCallback(err, rows, nextQuery, apiResponse) {
-        // const restructuredRows = rows.map(row => {
-        //   for (field in excludedFields) {
-        //     delete row[field]
-        //   }
-        //   for (prop of Object.keys(row)) {
-        //     if (row[prop] == null) {
-        //       delete row[prop]
-        //     }
-        //   }
-        //   return row
-        // })
-        anonymousTable.insert(rows, (err, apiResponse) => {
-          console.log(apiResponse)
-          if (err) {
-            console.log(err.toString())
-            if (err.name === 'PartialFailureError') {
-              console.log(err.errors[0].errors[0])
-            }
-          }
+      const { Storage } = require('@google-cloud/storage');
+      const storage = new Storage({
+        projectId: 'test-wintegreat',
+        keyFilename: config.bigquery.keyFileName
+      })
+      storage.bucket('anonymous-data-test-wintegreat').file('anonymous_data.csv').createReadStream()
+        .pipe(parse({ delimiter: ';', from_line: 2 }))
+        .on('error', (err) => {
+          console.log(err)
         })
-        if (nextQuery) {
-          setTimeout(() => {
-            console.log("=========== NEXT WAVE ============")
-            table.getRows(nextQuery, manualPaginationCallback)
-          }, 1000)
-
-        }
-      }
-
-      table.getRows({
-        autoPaginate: false,
-        maxResults: 1000
-      }, manualPaginationCallback);
-
-
-      // let [data] = await table.getRows()
-      // const mid = process.hrtime(start)
-      // console.log("restructuring rows")
-      // data = data.map(row => {
-      //   for (field in excludedFields) {
-      //     delete row[field]
-      //   }
-      //   for (prop of Object.keys(row)) {
-      //     if (row[prop] == null) {
-      //       delete row[prop]
-      //     }
-      //   }
-      //   return row
-      // })
-      // const end = process.hrtime(start)
-      // console.log(`mid: ${mid[1] / 1000000}ms`)
-      // console.log(`end: ${end[1] / 1000000}ms`)
-      // console.log(`rows restructured: ${data.length}`)
-      // while (data.length > 0) {
-      //   let insert = process.hrtime(start)
-      //   setTimeout(() => {
-      //     anonymousTable.insert(data.splice(0, 500), (err, apiResponse) => {
-      //       if (err) {
-      //         console.log(err.response.insertErrors[0])
-      //       }
-      //     })
-      //     console.log(`insert: ${insert[1] / 1000000}ms`)
-      //   }, 500)
+        .on('data', (line) => {
+          const splittedFunc = line[2].split('.')
+          excludedFields[line[1]] = faker
+          while (splittedFunc.length > 0) {
+            excludedFields[line[1]] = excludedFields[line[1]][splittedFunc.shift()]
+          }
+        });
+      // console.log(excludedFields)
+      // for (func in Object.keys(excludedFields)) {
+      //   console.log(func)
+      //   console.log(excludedFields[func]())
       // }
-      // console.log("Anonymisation contact fait!")
+      // const anonymData = (data) => {
+      //   for (row in data) {
+
+      //   }
+      // }
+      // const manualPaginationCallback = (err, rows, nextQuery, apiResponse) => {
+      //   bigqueryLib.insertData(config.bigquery.anonymousDataset, config.bigquery[entity].tableId, rows)
+      //   if (nextQuery) {
+      //     table.getRows(nextQuery, manualPaginationCallback)
+      //   }
+      // }
+      // table.getRows({
+      //   autoPaginate: false,
+      //   maxResults: 100
+      // }, manualPaginationCallback);
     } catch (err) {
       throw err
     }

@@ -87,12 +87,22 @@ module.exports = {
     const table = dataset.table(tableName)
     return table
   },
-  insertData: function (datasetName, tableName, data, insertHandler) {
+  insertData: function (datasetName, tableName, data) {
     try {
       const bqClient = getClient()
       const dataset = bqClient.dataset(datasetName)
-      const table = dataset.dataset(tableName)
-      table.insert(data, insertHandler)
+      const table = dataset.table(tableName)
+      console.log(`Inserting ${data.length} rows into ${datasetName}.${tableName}`)
+      table.insert(data, (err, apiResponse) => {
+        console.log(data.length, apiResponse)
+        if (err) {
+          console.log(err.toString())
+          if (err.name === 'PartialFailureError') {
+            console.log(err.errors[0].errors[0])
+          }
+        }
+      })
+      console.log(`Data inserted`)
     } catch (err) {
       throw err
     }

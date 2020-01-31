@@ -20,8 +20,8 @@ module.exports = {
     }
   },
   bigquery: {
-    projectId: 'test-wintegreat',
-    keyFileName: 'test-wintegreat-7ac9fc70c1e0.json',
+    projectId: 'wintegreat-programmes-v1',
+    keyFileName: 'wintegreat-programmes-v1-86b3f39d2263.json',
     dataset: "BDD_test",
     anonymousDataset: "anonymousDataset",
     contact: {
@@ -60,5 +60,10 @@ module.exports = {
         schema: {}
       }
     }
+  },
+  cloud_storage: {
+    projectId: 'wintegreat-programmes-v1',
+    bucket: 'anonymous-data-wintegreat-programmes-v1',
+    fileName: 'anonymous_data.csv'
   }
 }

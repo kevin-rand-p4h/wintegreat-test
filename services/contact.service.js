@@ -5,6 +5,35 @@ const hs = hubspot.getClient(config.hubspot.apiKey)
 const fs = require('fs')
 const { getProperty, castType } = require('./lib/utils')
 
+function getAnonymousFields() {
+  const faker = require('faker')
+  const parse = require('csv-parse')
+  console.log(faker.name.findName())
+  const { Storage } = require('@google-cloud/storage');
+  const storage = new Storage({
+    projectId: 'test-wintegreat',
+    keyFilename: config.bigquery.keyFileName
+  })
+  return new Promise((resolve, reject) => {
+    let excludedFields = {}
+    storage.bucket(config.cloud_storage.bucket).file(config.cloud_storage.fileName).createReadStream()
+      .pipe(parse({ delimiter: ';', from_line: 2 }))
+      .on('error', (err) => {
+        reject(err)
+      })
+      .on('data', (line) => {
+        const splittedFunc = line[2].split('.')
+        excludedFields[line[1]] = faker
+        while (splittedFunc.length > 0) {
+          excludedFields[line[1]] = excludedFields[line[1]][splittedFunc.shift()]
+        }
+      })
+      .on('end', () => {
+        resolve(excludedFields)
+      })
+  })
+}
+
 module.exports = {
   run: async function () {
     try {
@@ -118,51 +147,34 @@ module.exports = {
   },
   migrateAnonymousData: async function (entity) {
     try {
-      const faker = require('faker/locale/fr')
-      const parse = require('csv-parse')
       const start = process.hrtime()
       console.log(`Migrating ${entity}'s data to anonymous dataset`)
       const bigqueryLib = require('./lib/bigquery')
-      let excludedFields = {}
-      const anonymousTable = bigqueryLib.getTable(config.bigquery.anonymousDataset, config.bigquery[entity].tableId);
+      // const anonymousTable = bigqueryLib.getTable(config.bigquery.anonymousDataset, config.bigquery[entity].tableId);
       const table = bigqueryLib.getTable(config.bigquery.dataset, config.bigquery[entity.split('_').pop()].tableId);
-      const { Storage } = require('@google-cloud/storage');
-      const storage = new Storage({
-        projectId: 'test-wintegreat',
-        keyFilename: config.bigquery.keyFileName
-      })
-      storage.bucket('anonymous-data-test-wintegreat').file('anonymous_data.csv').createReadStream()
-        .pipe(parse({ delimiter: ';', from_line: 2 }))
-        .on('error', (err) => {
-          console.log(err)
-        })
-        .on('data', (line) => {
-          const splittedFunc = line[2].split('.')
-          excludedFields[line[1]] = faker
-          while (splittedFunc.length > 0) {
-            excludedFields[line[1]] = excludedFields[line[1]][splittedFunc.shift()]
+      const excludedFields = await getAnonymousFields()
+      const anonymData = (data) => {
+        const newData = []
+        for (row of data) {
+          for (key in excludedFields) {
+            if (row[key] != null)
+              row[key] = excludedFields[key]()
           }
-        });
-      // console.log(excludedFields)
-      // for (func in Object.keys(excludedFields)) {
-      //   console.log(func)
-      //   console.log(excludedFields[func]())
-      // }
-      // const anonymData = (data) => {
-      //   for (row in data) {
-
-      //   }
-      // }
-      // const manualPaginationCallback = (err, rows, nextQuery, apiResponse) => {
-      //   bigqueryLib.insertData(config.bigquery.anonymousDataset, config.bigquery[entity].tableId, rows)
-      //   if (nextQuery) {
-      //     table.getRows(nextQuery, manualPaginationCallback)
-      //   }
-      // }
-      // table.getRows({
-      //   autoPaginate: false,
-      //   maxResults: 100
-      // }, manualPaginationCallback);
+          newData.push(row)
+        }
+        return newData
+      }
+      const manualPaginationCallback = (err, rows, nextQuery, apiResponse) => {
+        const newRows = anonymData(rows)
+        bigqueryLib.insertData(config.bigquery.anonymousDataset, config.bigquery[entity].tableId, newRows)
+        if (nextQuery) {
+          table.getRows(nextQuery, manualPaginationCallback)
+        }
+      }
+      table.getRows({
+        autoPaginate: false,
+        maxResults: 250
+      }, manualPaginationCallback);
     } catch (err) {
       throw err
     }

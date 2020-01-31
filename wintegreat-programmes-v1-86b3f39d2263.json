@@ -1,0 +1,12 @@
+{
+  "type": "service_account",
+  "project_id": "wintegreat-programmes-v1",
+  "private_key_id": "86b3f39d22630fed2586705dc0ebe896918c2d18",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvgIBADANBgkqhkiG9w0BAQEFAASCBKgwggSkAgEAAoIBAQDVpbaFZpB0ACzj\ncpBhL/as0Dxe/w+SKL0Zo6CjQzL2cshyEs0pKzED61WULOM4gwqswhupM7TJKmjd\nIg3IAgoqSAoZbtiLCbF2DzIUV1rtw1pQsZtaZY0o3CNSD11+p3ZfD0NbKjUCvkz6\nPthQnMZhGuclqQWmWEfP9//98sNniXBsHtk/MP21SO1ciRN0JXdwNgGgXW4ksVTB\npCjj7BvxVqsY4XqwC0eSMvjaQ+oaTrmTcsrUNR9unGAyVgskQV6wMr5nmO1XRhyj\nm4+js8qgMSMuuVR4Ye6k6Kbi+9sWmbk46zi0cFvs/8aXClp4HAKf5wgm6MF2PxSD\nVYJ5pRxxAgMBAAECggEAIYy9zlIOYiD665a8hH6HMpkaueI83DtogqO24Jx3Xssk\nngFE1W+yaUal8DhiUCgH35w1wsrbW3G8+OjVmDB1zzDz4Q2OlLrncr4tI5OaNFcm\nkiBp4HatBZsYMtU13eNHS+M2NRU6MN2Ycf23c2VDI9GZNclGmVoooMh1mzfpppLd\nsABzigXZvt3bsfllaxFot2PoxC31E7fFzkxu8dxh4WFepgKL5Pbo/Ta6ImCtGD1M\nljTNxgfZ+WwlIs8Z48ZRgOmY57da3GVCF8hQMvrJsDS0A9lsQT55Xf+1dN8c2/LL\nh1drbojtTdDPwQE2PfZXAs5vJ+UMBhbPPA4VHPqAFwKBgQDr4/D6OJwjQL/yWFW6\nVOSfwXjnxnHxz8v4uIzceP4rfz/ti3yNszeTNDV6UifiSbr+CyZHuotzV08FqF3T\nHvBgNnhX93iCc1/cGLNXlUuGfYDlas0rup3R11MIaFvfld0hijKbgg81fW2NYsDb\nYM5o0B+5f0wESBDgV+VSEzAMAwKBgQDn3FcGk9Lo1wZPqExJs1Z9MVQpjrrcfl26\ngjNwOvAJAMo2TE3hq1RIt8uvodKJ0CT4DYtCcStoObnec6BEyOCtTY9rvbFJeh2v\npTPDtYeUWEJdBPJv/cNzV+/N2es/hZIubvSkj5bYu6keexHIcVkkuMumG1ATmtaS\n6+mMrBEdewKBgQDbjnqx+1TgvxipcazBVNjDFWn6mMtfneCk7Ok3IGq6g6M171mL\n7l5w5exMoQE8bxHb+Pa1Vp0LSx1jD7XclnR3qNtUTSNekBKOInNytqPoVxJM9p5m\n8DiKotdHARNaRPvghufZtDGBwO/h5CPLTQxxpB2TIzfW2FjU5xqrzO4wjwKBgQCF\nFIMe01oLKuAEeKTQ6I6L7PRRpgq65A0IMBM2J53+jOWDpOhOzvfhhRz0Af3F/CI7\n/gogaLRxbjCw7czfrizHS+01+fr4IY9IcZn0iwz2qHHu0hgVD6JPYfnSPXI5U4FE\nBYuFqKT8YToAtMLQOb7gxPCetq6Pkh/21FGI3Ho2YQKBgDusRAnqD7B5nHX1j4Yy\nayfN5QDgIUNbJR0Lbj1zL6q6Del3jI+U8F+yzPY0JRPQH3lZDKKJMAWbF9w9EMoK\np4ExGqXaDpuhdXmDmLy30+6VjTfbc300uOrBgs5KUXhCYheOoFprycbSSUw2GUBO\n/jdN/zWn4ovjoK5RSWM+sGx/\n-----END PRIVATE KEY-----\n",
+  "client_email": "wintegreat-hubspot-to-bigquery@wintegreat-programmes-v1.iam.gserviceaccount.com",
+  "client_id": "107990171946079119047",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/wintegreat-hubspot-to-bigquery%40wintegreat-programmes-v1.iam.gserviceaccount.com"
+}

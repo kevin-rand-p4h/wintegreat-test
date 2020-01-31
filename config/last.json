@@ -1,1 +1,13 @@
-{"contact":{"vidOffset":201},"company":{"timestamp":"1579509352963"},"ticket":{"timestamp":1579095148180,"changeType":"CREATED","objectId":76442202}}
+{
+  "contact": {
+    "vidOffset": 201
+  },
+  "company": {
+    "timestamp": "1579509352963"
+  },
+  "ticket": {
+    "timestamp": 1579095148180,
+    "changeType": "CREATED",
+    "objectId": 76442202
+  }
+}
